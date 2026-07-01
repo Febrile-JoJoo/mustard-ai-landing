@@ -1,0 +1,773 @@
+/* ============================================
+   조셉 DY Cho — Landing Page
+   머스타드 메인 컬러 + 배경 비디오
+   ============================================ */
+
+/* RESET */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* 머스타드 계열 */
+  --bg-deep: #E1AD01;
+  --bg-deep-dark: #C99801;
+  --bg-card: #D4A017;
+  --bg-card-hover: #BF9015;
+  --accent: #0B1426;
+  --accent-glow: rgba(11, 20, 38, 0.3);
+  --blue: #1E3A5F;
+  --white: #FFFFFF;
+  --black: #0B1426;
+  --text-dark: #0B1426;
+  --text-body: #1A1A1A;
+  --text-muted: #3D3D3D;
+  --text-on-dark: #FFFFFF;
+  --border: rgba(0, 0, 0, 0.12);
+  --border-hover: rgba(0, 0, 0, 0.25);
+  --radius: 12px;
+  --radius-lg: 16px;
+  --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans KR', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font);
+  color: var(--text-body);
+  background: var(--bg-deep);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ============================================
+   NAV — 머스타드 배경
+   ============================================ */
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 72px;
+  background: rgba(225, 173, 1, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  z-index: 100;
+}
+
+.nav-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1100px;
+  padding: 0 3rem;
+}
+
+.nav-name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--black);
+  text-decoration: none;
+  letter-spacing: -0.02em;
+}
+
+.nav-brand {
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+.nav-author {
+  font-size: 0.75rem;
+  font-weight: 400;
+  opacity: 0.7;
+  vertical-align: middle;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-links a {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #5C3D00;
+  text-decoration: none;
+  padding: 6px 14px;
+  border: 1.5px solid #5C3D00;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.nav-links a:hover {
+  background: #5C3D00;
+  color: var(--white);
+}
+
+.nav-cta {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #5C3D00;
+  text-decoration: none;
+  padding: 6px 14px;
+  border: 1.5px solid #5C3D00;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
+  background: transparent;
+  box-shadow: none;
+}
+
+.nav-cta:hover {
+  background: #5C3D00;
+  color: var(--white);
+  transform: none;
+  box-shadow: none;
+  opacity: 1 !important;
+}
+
+/* ============================================
+   HERO — 배경 비디오 + 머스타드 오버레이
+   ============================================ */
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-video,
+#hero-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.hero-video {
+  object-fit: cover;
+}
+
+.hero-bg {
+  position: absolute;
+  top: -10%;
+  left: -10%;
+  width: 120%;
+  height: 120%;
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+  filter: blur(3px) brightness(0.7);
+  opacity: 0;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.hero-bg-1 {
+  background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&q=80');
+  animation: crossfadeA 15s ease-in-out infinite, slowMoveA 20s ease-in-out infinite alternate;
+}
+
+.hero-bg-2 {
+  background-image: url('https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1920&q=80');
+  animation: crossfadeB 15s ease-in-out infinite, slowMoveB 25s ease-in-out infinite alternate;
+}
+
+.hero-bg-3 {
+  background-image: url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1920&q=80');
+  animation: crossfadeC 15s ease-in-out infinite, slowMoveC 22s ease-in-out infinite alternate;
+}
+
+@keyframes crossfadeA {
+  0% { opacity: 1; }
+  23% { opacity: 1; }
+  33% { opacity: 0; }
+  90% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes crossfadeB {
+  0% { opacity: 0; }
+  23% { opacity: 0; }
+  33% { opacity: 1; }
+  56% { opacity: 1; }
+  66% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+@keyframes crossfadeC {
+  0% { opacity: 0; }
+  56% { opacity: 0; }
+  66% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@keyframes slowMoveA {
+  0% { transform: scale(1) translate(0, 0); }
+  100% { transform: scale(1.08) translate(-2%, -1.5%); }
+}
+
+@keyframes slowMoveB {
+  0% { transform: scale(1.05) translate(-1%, 0); }
+  100% { transform: scale(1) translate(1%, -2%); }
+}
+
+@keyframes slowMoveC {
+  0% { transform: scale(1.1) translate(1%, 1%); }
+  100% { transform: scale(1.02) translate(-1%, -1%); }
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(225, 173, 1, 0.75);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 60vh;
+  padding: 8rem 0 4rem;
+}
+
+.hero-lead {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.85);
+  letter-spacing: 0.05em;
+  line-height: 1.8;
+  margin-top: 2rem;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
+}
+
+.hero-headline {
+  font-size: clamp(2.2rem, 5vw, 3.8rem);
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.25;
+  letter-spacing: -0.03em;
+  max-width: 750px;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.4), 0 0 40px rgba(0, 0, 0, 0.2);
+}
+
+.hero-btns {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.btn-primary {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--black);
+  background: var(--white);
+  padding: 14px 32px;
+  border-radius: 8px;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.btn-ghost {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--white);
+  background: transparent;
+  padding: 14px 32px;
+  border-radius: 8px;
+  text-decoration: none;
+  border: 2px solid var(--white);
+  transition: background 0.2s, color 0.2s;
+}
+
+.btn-ghost:hover {
+  background: var(--white);
+  color: var(--black);
+}
+
+/* ============================================
+   ABOUT — 머스타드 배경
+   ============================================ */
+
+.about {
+  padding: 8rem 3rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.about-header {
+  margin-bottom: 3rem;
+}
+
+.about-header h2 {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 700;
+  color: var(--black);
+  letter-spacing: -0.02em;
+}
+
+.about-body p {
+  font-size: 1.3rem;
+  color: var(--text-body);
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+}
+
+.about-body p:last-child {
+  margin-bottom: 0;
+}
+
+/* ============================================
+   PROJECT — 진한 머스타드 배경
+   ============================================ */
+
+.project {
+  padding: 8rem 3rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.project > * {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.project h2 {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 700;
+  color: var(--black);
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
+
+.project-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.project-header h2 {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 700;
+  color: var(--black);
+  letter-spacing: -0.02em;
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+.project-name {
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 900;
+  color: var(--black);
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+
+.project-tagline {
+  font-size: 1.2rem;
+  color: var(--text-body);
+  line-height: 1.8;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+}
+
+.project-architecture {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  line-height: 1.8;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* AGENT GRID — 3x3 카드 */
+
+.agent-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.agent-card {
+  background: rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: var(--radius-lg);
+  padding: 2rem 1.5rem;
+  transition: border-color 0.3s, transform 0.3s;
+}
+
+.agent-card:hover {
+  border-color: var(--black);
+  transform: translateY(-4px);
+}
+
+.agent-icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.agent-card h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--black);
+  margin-bottom: 0.6rem;
+}
+
+.agent-card p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.project-quote {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-muted);
+  border-left: 3px solid var(--black);
+  padding-left: 1.5rem;
+  margin-top: 2rem;
+  max-width: 600px;
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ============================================
+   ARCHITECTURE — 시스템 아키텍처 플로우
+   ============================================ */
+
+.architecture {
+  padding: 8rem 3rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.architecture h2 {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 700;
+  color: var(--black);
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.02em;
+}
+
+.architecture-sub {
+  font-size: 1.2rem;
+  color: var(--text-muted);
+  margin-bottom: 4rem;
+}
+
+.flow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+.flow-step {
+  background: #2D2006;
+  color: #FFF8E1;
+  padding: 2rem 2.5rem;
+  border-radius: var(--radius-lg);
+  width: 100%;
+  max-width: 700px;
+  text-align: center;
+  border: 1px solid rgba(225, 173, 1, 0.3);
+}
+
+.flow-label {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #FFE082;
+}
+
+.flow-desc {
+  font-size: 0.9rem;
+  color: rgba(255, 248, 225, 0.7);
+  line-height: 1.6;
+}
+
+.flow-sources {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  justify-content: center;
+  margin-top: 0.8rem;
+}
+
+.flow-sources span {
+  background: rgba(225, 173, 1, 0.25);
+  color: #FFE082;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.flow-agents {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.flow-agents span {
+  background: rgba(225, 173, 1, 0.2);
+  color: #FFF8E1;
+  padding: 0.6rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.flow-step--agents {
+  max-width: 700px;
+}
+
+.flow-step--final {
+  background: #FFD700;
+  color: #1A1000;
+  border: 6px solid #B8860B;
+  box-shadow: 0 4px 20px rgba(225, 173, 1, 0.3);
+}
+
+.flow-step--final .flow-label {
+  color: #1A1000;
+  font-size: 1.4rem;
+}
+
+.flow-step--final .flow-desc {
+  color: rgba(26, 16, 0, 0.7);
+  font-size: 1.05rem;
+}
+
+.flow-arrow {
+  font-size: 1.5rem;
+  color: #2D2006;
+  padding: 0.8rem 0;
+  opacity: 0.5;
+}
+
+/* ============================================
+   NOW — 진한 머스타드 배경
+   ============================================ */
+
+.now {
+  padding: 8rem 3rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.now > * {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.now h2 {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 700;
+  color: var(--black);
+  margin-bottom: 3rem;
+  letter-spacing: -0.02em;
+}
+
+.now-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.now-card {
+  background: rgba(0, 0, 0, 0.04);
+  border: 1.5px solid rgba(0, 0, 0, 0.15);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  transition: border-color 0.3s;
+}
+
+.now-card:hover {
+  border-color: var(--black);
+}
+
+.now-label {
+  display: inline-block;
+  font-size: 1.14rem;
+  font-weight: 700;
+  color: var(--black);
+  margin-bottom: 0.5rem;
+}
+
+.now-card p {
+  font-size: 1.14rem;
+  color: var(--text-body);
+  line-height: 1.7;
+}
+
+/* ============================================
+   CONTACT
+   ============================================ */
+
+.contact {
+  padding: 10rem 3rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.contact h2 {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 700;
+  color: var(--black);
+  margin-bottom: 2rem;
+  letter-spacing: -0.02em;
+  text-align: left;
+}
+
+.contact-center {
+  text-align: center;
+}
+
+.email-link {
+  display: inline-block;
+  font-size: clamp(0.84rem, 1.68vw, 1.4rem);
+  font-weight: 600;
+  color: var(--black);
+  text-decoration: none;
+  padding-bottom: 4px;
+  border-bottom: 2px solid var(--black);
+  transition: opacity 0.2s;
+}
+
+.email-link:hover {
+  opacity: 0.7;
+}
+
+.contact-links {
+  margin-top: 2.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.contact-links a {
+  font-size: clamp(0.84rem, 1.68vw, 1.4rem);
+  font-weight: 500;
+  color: var(--text-muted);
+  text-decoration: none;
+  padding-bottom: 4px;
+  border-bottom: 2px solid var(--black);
+  transition: color 0.2s;
+}
+
+.contact-links a:hover {
+  color: var(--black);
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+
+footer {
+  padding: 2rem 3rem;
+  text-align: center;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  background: var(--bg-deep-dark);
+}
+
+footer p {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* ============================================
+   MOBILE
+   ============================================ */
+
+@media (max-width: 768px) {
+  nav {
+    padding: 0 1.5rem;
+    height: 60px;
+  }
+
+  .hero {
+    padding: 0 1.5rem;
+  }
+
+  .hero-btns {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .about {
+    padding: 5rem 1.5rem;
+  }
+
+  .project {
+    padding: 5rem 1.5rem;
+  }
+
+  .agent-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .architecture {
+    padding: 5rem 1.5rem;
+  }
+
+  .flow-agents {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .flow-sources {
+    grid-template-columns: 1fr;
+  }
+
+  .now {
+    padding: 5rem 1.5rem;
+  }
+
+  .now-list {
+    grid-template-columns: 1fr;
+  }
+
+  .contact {
+    padding: 6rem 1.5rem;
+  }
+}

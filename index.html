@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>조셉 DY Cho</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <a href="#" class="nav-name"><span class="nav-brand">머스타드 AI</span> <span class="nav-author">by Joseph</span></a>
+      <div class="nav-links">
+        <a href="#about">소개</a>
+        <a href="#project">무엇을 만드나</a>
+        <a href="#architecture">시스템 아키텍처</a>
+        <a href="#now">현재 진행 중</a>
+        <a href="#contact" class="nav-cta">연락처</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO — 배경 이미지 + 머스타드 오버레이 -->
+  <section class="hero">
+    <div class="hero-bg hero-bg-1"></div>
+    <div class="hero-bg hero-bg-2"></div>
+    <div class="hero-bg hero-bg-3"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1 class="hero-headline">감정을 걷어내고,<br>근거 위에<br>투자할 수 있도록!</h1>
+      <p class="hero-lead">AI로 투자 판단의 근거를 만들고<br>학습하는 플랫폼을 만듭니다.</p>
+      <div class="hero-btns">
+        <a href="#about" class="btn-primary">소개 보기</a>
+        <a href="#contact" class="btn-ghost">연락하기</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="about-header">
+      <h2>소개</h2>
+    </div>
+    <div class="about-body">
+      <p>18년간 금융 투자 분야에서 일했습니다.<br>투자 플랫폼을 기획하고 운영했고, 퀀트 알고리즘을 설계했으며, 구조화 상품을 만들었습니다.</p>
+      <p>지금은 루카텍에서 AI가 투자 판단의 근거를 만들어주는 리서치 플랫폼을 개발하고 있습니다.</p>
+    </div>
+  </section>
+
+  <!-- PROJECT -->
+  <section class="project" id="project">
+    <div class="project-header">
+      <h2>무엇을 만드나?</h2>
+      <p class="project-name">머스타드AI</p>
+      <p class="project-tagline">9개 AI 에이전트가 종목의 모든 각도를 분석하는 투자 리서치 시스템.</p>
+      <p class="project-architecture">기존 정량적 퀀트 모델의 한계(정성적 리스크 오독)와 일반 거대언어모델의 한계(수치적 환각)를 동시에 극복하기 위해, 금융공학과 9인 AI 에이전트의 합의 메커니즘을 융합한 하이브리드 가치평가 아키텍처를 채택하고 있습니다.</p>
+    </div>
+
+    <div class="agent-grid">
+      <div class="agent-card">
+        <div class="agent-icon">📊</div>
+        <h3>재무 분석</h3>
+        <p>S-RIM 적정가 산출, ROE·PBR 기반 내재가치 추론</p>
+      </div>
+      <div class="agent-card">
+        <div class="agent-icon">📈</div>
+        <h3>기술적 지표</h3>
+        <p>이동평균·RSI·MACD로 매수·매도 타이밍 포착</p>
+      </div>
+      <div class="agent-card">
+        <div class="agent-icon">📰</div>
+        <h3>뉴스·공시 감성</h3>
+        <p>실시간 뉴스 감성 분석, DART 공시 리스크 검출</p>
+      </div>
+      <div class="agent-card">
+        <div class="agent-icon">👥</div>
+        <h3>수급 동향</h3>
+        <p>외국인·기관 매집 패턴 분석, 스마트 머니 추적</p>
+      </div>
+      <div class="agent-card">
+        <div class="agent-icon">🌍</div>
+        <h3>거시경제</h3>
+        <p>금리·환율·CPI·VIX로 경기 국면 판단</p>
+      </div>
+      <div class="agent-card">
+        <div class="agent-icon">🚀</div>
+        <h3>성장성 평가</h3>
+        <p>매출 성장률, 신사업 테마와의 시너지 분석</p>
+      </div>
+      <div class="agent-card">
+        <div class="agent-icon">🛡️</div>
+        <h3>안정성·리스크</h3>
+        <p>현금흐름·자본잠식 진단, 좀비기업 필터링</p>
+      </div>
+      <div class="agent-card">
+        <div class="agent-icon">👑</div>
+        <h3>시장 위상</h3>
+        <p>섹터 내 순위, 대장주 여부, 가격 결정권 분석</p>
+      </div>
+      <div class="agent-card">
+        <div class="agent-icon">🔮</div>
+        <h3>미래 전망</h3>
+        <p>5개년 시뮬레이션, 생존 확률, 목표 주가 산출</p>
+      </div>
+    </div>
+
+    <blockquote class="project-quote">
+      "우리는 수익을 보장하지 않습니다. 대신 9가지 관점에서 왜 그렇게 분석했는지 전부 보여드립니다."
+    </blockquote>
+  </section>
+
+  <!-- ARCHITECTURE -->
+  <section class="architecture" id="architecture">
+    <h2>시스템 아키텍처</h2>
+    <p class="architecture-sub">데이터에서 근거까지, 모든 과정이 투명합니다.</p>
+
+    <div class="flow">
+      <!-- 1. 데이터 소스 -->
+      <div class="flow-step">
+        <div class="flow-label">데이터 소스</div>
+        <div class="flow-sources">
+          <span>재무제표DB</span>
+          <span>주식 데이터 API</span>
+          <span>DART 실시간 공시</span>
+          <span>실시간 뉴스 피드</span>
+          <span>실시간 시세 피드</span>
+          <span>매크로/원자재 지표</span>
+        </div>
+      </div>
+
+      <div class="flow-arrow">▼</div>
+
+      <!-- 2. 전처리 -->
+      <div class="flow-step">
+        <div class="flow-label">데이터 전처리 및 기초 산출 연산</div>
+        <p class="flow-desc">Data Prep & Pre-calculation</p>
+      </div>
+
+      <div class="flow-arrow">▼</div>
+
+      <!-- 3. 9개 에이전트 -->
+      <div class="flow-step flow-step--agents">
+        <div class="flow-label">9대 에이전트 병렬 분석</div>
+        <div class="flow-agents">
+          <span>📊 재무</span>
+          <span>📈 기술적</span>
+          <span>📰 뉴스·공시</span>
+          <span>👥 수급</span>
+          <span>🌍 거시경제</span>
+          <span>🚀 성장성</span>
+          <span>🛡️ 안정성</span>
+          <span>👑 시장위상</span>
+          <span>🔮 미래가치</span>
+        </div>
+      </div>
+
+      <div class="flow-arrow">▼</div>
+
+      <!-- 4. 합의 점수 -->
+      <div class="flow-step">
+        <div class="flow-label">합의 점수(0~100) 산출</div>
+        <p class="flow-desc">정성적 가중 멀티플러 계산</p>
+      </div>
+
+      <div class="flow-arrow">▼</div>
+
+      <!-- 5. 하이브리드 가치평가 -->
+      <div class="flow-step">
+        <div class="flow-label">하이브리드 가치평가</div>
+        <p class="flow-desc">금융공학(S-RIM) 적정가 × 정성적 멀티플러 융합</p>
+      </div>
+
+      <div class="flow-arrow">▼</div>
+
+      <!-- 6. 가드레일 -->
+      <div class="flow-step">
+        <div class="flow-label">Self-Reflection 가드레일</div>
+        <p class="flow-desc">논리적 일관성 검증 및 텍스트-수치 자아 성찰</p>
+      </div>
+
+      <div class="flow-arrow">▼</div>
+
+      <!-- 7. 최종 리포트 -->
+      <div class="flow-step flow-step--final">
+        <div class="flow-label">최종 분석 리포트</div>
+        <p class="flow-desc">VIP 실시간 분석 리포트 및 적정 목표 주가 출력</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- NOW -->
+  <section class="now" id="now">
+    <h2>현재 진행 중</h2>
+    <div class="now-list">
+      <div class="now-card">
+        <span class="now-label">머스타드 AI, B2C 런칭 준비</span>
+        <p>9개 멀티에이전트 기반 투자리서치 서비스.</p>
+      </div>
+      <div class="now-card">
+        <span class="now-label">B2B 제휴</span>
+        <p>증권사·재무설계 기업 대상 AI 리서치 시스템 제공</p>
+      </div>
+      <div class="now-card">
+        <span class="now-label">투자교육 프로그램</span>
+        <p>투자초보자, 학습열망자, 전문가, 금융인 AI투자 교육 (AI융합학과 교수 및 CTO, 애널리스트)</p>
+      </div>
+      <div class="now-card">
+        <span class="now-label">금융 구조 설계</span>
+        <p>레비뉴본드, 무역금융 유동화, SOC 사업권 구조화 상품 설계</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <h2>사업제휴 및 연락처</h2>
+    <div class="contact-center">
+      <a href="mailto:febrilejoseph@gmail.com" class="email-link">febrilejoseph@gmail.com</a>
+      <div class="contact-links">
+        <a href="https://linkedin.com/" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2026 Joseph Cho. Built with Mustard AI &mdash; Lucatec Inc.</p>
+  </footer>
+
+  <script>
+    document.querySelector('.year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
