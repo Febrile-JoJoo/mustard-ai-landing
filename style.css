@@ -1314,128 +1314,83 @@ html {
   }
 }
 /* ============================================
-   v2.5 — HERO 배경: 데이터 나무
-   (씨앗→나무→AI 노드 네트워크 라인 드로잉)
+/* ============================================
+   v2.6 — HERO 배경: 투자·AI 이미지 3컷
+   5초 디졸브 + 켄번즈(줌인/줌아웃/무빙)
    ============================================ */
 
-.hero-tree {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
+.hero-bg {
+  filter: brightness(0.85);
 }
 
-.hero-tree path,
-.hero-tree line {
-  fill: none;
-  stroke-linecap: round;
+.hero-bg-1 {
+  background-image: url('assets/hero-1.jpg');
+  animation: xfadeA 15s ease-in-out infinite, kenburnsZoomIn 15s ease-in-out infinite;
 }
 
-/* 지면 */
-.t-ground {
-  stroke: rgba(45, 32, 6, 0.5);
-  stroke-width: 1.5;
-  stroke-dasharray: 1100;
-  stroke-dashoffset: 1100;
-  animation: drawLine 1.2s ease-out 0.2s forwards;
+.hero-bg-2 {
+  background-image: url('assets/hero-2.jpg');
+  animation: xfadeB 15s ease-in-out infinite, kenburnsZoomOut 15s ease-in-out infinite;
 }
 
-/* 씨앗 — 등장 */
-.t-seed {
-  fill: rgba(45, 32, 6, 0.65);
-  stroke: none;
-  opacity: 0;
-  transform-origin: 640px 712px;
-  animation: seedPop 0.8s cubic-bezier(0.2, 0.8, 0.3, 1) 0.4s forwards;
+.hero-bg-3 {
+  background-image: url('assets/hero-3.jpg');
+  animation: xfadeC 15s ease-in-out infinite, kenburnsPan 15s ease-in-out infinite;
 }
 
-/* 줄기 — 굵은 유기 곡선 */
-.dt-trunk {
-  stroke: rgba(45, 32, 6, 0.55);
-  stroke-width: 3.2;
-  stroke-dasharray: 260;
-  stroke-dashoffset: 260;
-  animation: drawLine 0.9s ease-in-out forwards;
+/* 15초 주기 = 3컷 × 5초. 디졸브 겸침 1.5초 */
+@keyframes xfadeA {
+  0% { opacity: 1; }
+  30% { opacity: 1; }
+  40% { opacity: 0; }
+  90% { opacity: 0; }
+  100% { opacity: 1; }
 }
 
-/* 가지 */
-.dt-branch {
-  stroke: rgba(45, 32, 6, 0.48);
-  stroke-width: 2;
-  stroke-dasharray: 180;
-  stroke-dashoffset: 180;
-  animation: drawLine 0.8s ease-out forwards;
+@keyframes xfadeB {
+  0% { opacity: 0; }
+  30% { opacity: 0; }
+  40% { opacity: 1; }
+  63% { opacity: 1; }
+  73% { opacity: 0; }
+  100% { opacity: 0; }
 }
 
-/* 잔가지 */
-.dt-twig {
-  stroke: rgba(45, 32, 6, 0.38);
-  stroke-width: 1.2;
-  stroke-dasharray: 110;
-  stroke-dashoffset: 110;
-  animation: drawLine 0.7s ease-out forwards;
+@keyframes xfadeC {
+  0% { opacity: 0; }
+  63% { opacity: 0; }
+  73% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { opacity: 0; }
 }
 
-/* 노드 연결선 — 네트워크 */
-.dt-link {
-  stroke: rgba(45, 32, 6, 0.22);
-  stroke-width: 1;
-  stroke-dasharray: 160;
-  stroke-dashoffset: 160;
-  animation: drawLine 1s ease-out forwards;
+/* 켄번즈 3종 — 각 컷이 보이는 구간 동안 서서히 */
+@keyframes kenburnsZoomIn {
+  0% { transform: scale(1); }
+  40% { transform: scale(1.12) translate(-1.5%, -1%); }
+  100% { transform: scale(1); }
 }
 
-/* 소형 데이터 노드 */
-.dt-node {
-  fill: rgba(45, 32, 6, 0.45);
-  stroke: none;
-  opacity: 0;
-  animation: nodeIn 0.6s ease-out forwards;
+@keyframes kenburnsZoomOut {
+  0%, 30% { transform: scale(1.14) translate(1%, 1%); }
+  73% { transform: scale(1); }
+  100% { transform: scale(1.14) translate(1%, 1%); }
 }
 
-/* 9개 에이전트 노드 — 링 + 펄스 */
-.dt-node9 {
-  fill: rgba(45, 32, 6, 0.75);
-  stroke: rgba(45, 32, 6, 0.4);
-  stroke-width: 2.5;
-  opacity: 0;
-  animation: nodeIn 0.7s ease-out forwards, nodePulse 4s ease-in-out 5s infinite;
+@keyframes kenburnsPan {
+  0%, 63% { transform: scale(1.1) translate(2%, 0); }
+  100% { transform: scale(1.1) translate(-2%, -1.5%); }
 }
 
-@keyframes drawLine {
-  to { stroke-dashoffset: 0; }
-}
-
-@keyframes seedPop {
-  0% { opacity: 0; transform: scale(0.2); }
-  70% { opacity: 1; transform: scale(1.25); }
-  100% { opacity: 1; transform: scale(1); }
-}
-
-@keyframes nodeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-@keyframes nodePulse {
-  0%, 100% { stroke-width: 2.5; stroke-opacity: 0.4; }
-  50% { stroke-width: 5; stroke-opacity: 0.15; }
-}
-
-/* 오버레이 — 옅게 */
+/* 오버레이 — 사진 위 브랜드 톤 + 텍스트 가독성 */
 .hero-overlay {
-  background: rgba(225, 173, 1, 0.18);
+  background: linear-gradient(180deg, rgba(225, 173, 1, 0.5) 0%, rgba(184, 134, 11, 0.55) 100%);
 }
 
 /* 모션 최소화 선호 사용자 배려 */
 @media (prefers-reduced-motion: reduce) {
-  .hero-tree path,
-  .hero-tree line,
-  .hero-tree circle {
+  .hero-bg {
     animation: none !important;
-    stroke-dashoffset: 0 !important;
-    opacity: 1 !important;
   }
+  .hero-bg-1 { opacity: 1 !important; }
 }
