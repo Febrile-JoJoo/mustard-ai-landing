@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Joseph's Mustard AI</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -15,46 +15,89 @@
     <div class="nav-inner">
       <a href="#" class="nav-name"><span class="nav-brand">머스타드 AI</span> <span class="nav-author">by Joseph</span></a>
       <div class="nav-links">
-        <a href="#about">소개</a>
-        <a href="#project">무엇을 만드나</a>
-        <a href="#architecture">시스템 아키텍처</a>
-        <a href="#now">현재 진행 중</a>
-        <a href="#contact" class="nav-cta">연락처</a>
+        <a href="#agents">9개 AI 분석</a>
+        <a href="#mustard">MUSTARD 7단계</a>
+        <a href="#why">왜 만들었나</a>
+        <a href="#now">진행 중</a>
+        <a href="#join" class="nav-cta">참여하기</a>
       </div>
     </div>
   </nav>
 
-  <!-- HERO — 배경 이미지 + 머스타드 오버레이 -->
+  <!-- 1. HERO — No seed, no fruit. -->
   <section class="hero">
     <div class="hero-bg hero-bg-1"></div>
     <div class="hero-bg hero-bg-2"></div>
     <div class="hero-bg hero-bg-3"></div>
     <div class="hero-overlay"></div>
     <div class="hero-content">
-      <h1 class="hero-headline">감정을 걷어내고,<br>근거 위에<br>투자할 수 있도록!</h1>
-      <p class="hero-lead">AI로 투자 판단의 근거를 만들고<br>학습하는 플랫폼을 만듭니다.</p>
+      <p class="hero-slogan-en">No seed, no fruit.</p>
+      <h1 class="hero-headline">씨앗 없이는,<br>열매도 없다</h1>
+      <p class="hero-lead">투자에서 그 씨앗은 '학습'입니다.<br>감정을 걷어내고, 근거 위에 투자할 수 있도록 —<br>9개 AI 에이전트와 함께하는 투자 스터디그룹, 머스타드AI</p>
       <div class="hero-btns">
-        <a href="#about" class="btn-primary">소개 보기</a>
-        <a href="#contact" class="btn-ghost">연락하기</a>
+        <a href="#mustard" class="btn-primary">씨앗이 자라는 7단계를 보세요 ↓</a>
+        <a href="#join" class="btn-ghost">참여하기</a>
       </div>
     </div>
   </section>
 
-  <!-- ABOUT -->
-  <section class="about" id="about">
-    <div class="about-header">
-      <h2>소개</h2>
+  <!-- 2. MUSTARD 7단계 띠 -->
+  <section class="mustard-band" id="mustard">
+    <div class="mustard-why">
+      <p class="section-overline">Why Mustard?</p>
+      <h2 class="band-title">왜 겨자씨인가</h2>
+      <p class="why-body">겨자씨는 모든 씨앗 중 가장 작습니다.<br>그러나 자라면 새가 깃드는 나무가 됩니다.</p>
+      <p class="why-body">이 페이지의 노란색은 겨자꽃이 만발한 들판의 색 —<br>작은 씨앗이 마침내 도달하는 풍경입니다.</p>
+      <p class="why-body why-body--strong">MUSTARD 일곱 글자에,<br>씨앗이 나무가 되는 순서를 담았습니다.</p>
     </div>
-    <div class="about-body">
-      <p>18년간 금융 투자 분야에서 일했습니다.<br>투자 플랫폼을 기획하고 운영했고, 퀀트 알고리즘을 설계했으며, 구조화 상품을 만들었습니다.</p>
-      <p>지금은 루카텍에서 AI가 투자 판단의 근거를 만들어주는 리서치 플랫폼을 개발하고 있습니다.</p>
+    <h2 class="band-title">MUSTARD 7단계</h2>
+    <p class="band-sub">브랜드 이름에 방법이 담겨 있습니다</p>
+    <div class="band-track">
+      <a href="#agents" class="band-step" data-tip="9개 AI 에이전트가 감정 없이 근거를 깔아줍니다">
+        <span class="band-initial">M</span>
+        <span class="band-word">Multi-agent</span>
+        <span class="band-ko">근거</span>
+      </a>
+      <a href="#why" class="band-step" data-tip="받아먹지 않고, 왜 그런지 스스로 이해합니다">
+        <span class="band-initial">U</span>
+        <span class="band-word">Understand</span>
+        <span class="band-ko">이해</span>
+      </a>
+      <a href="#study" class="band-step" data-tip="질문하고 검증하며 함께 공부합니다">
+        <span class="band-initial">S</span>
+        <span class="band-word">Study</span>
+        <span class="band-ko">함께</span>
+      </a>
+      <a href="#thesis" class="band-step band-step--pivot" data-tip="남의 말이 아닌, 나만의 투자 원칙이 섭니다">
+        <span class="band-initial">T</span>
+        <span class="band-word">Thesis</span>
+        <span class="band-ko">원칙</span>
+      </a>
+      <a href="#agentic" class="band-step" data-tip="내 원칙을 나만의 AI 에이전트로 구현합니다">
+        <span class="band-initial">A</span>
+        <span class="band-word">Agentic</span>
+        <span class="band-ko">구현</span>
+      </a>
+      <a href="#resilience" class="band-step" data-tip="시장이 요동쳐도 흔들리지 않는 구조를 갖춥니다">
+        <span class="band-initial">R</span>
+        <span class="band-word">Resilience</span>
+        <span class="band-ko">안정</span>
+      </a>
+      <a href="#develop" class="band-step" data-tip="수익을 넘어, 진화하는 투자자로 성장합니다">
+        <span class="band-initial">D</span>
+        <span class="band-word">Develop</span>
+        <span class="band-ko">성장</span>
+      </a>
     </div>
+    <div class="band-growth">🌱 ─────────────── 🌳 <span class="band-return">↩ D의 열매는 다시 M의 씨앗으로</span></div>
+    <p class="band-slogan">Small seed. Big signal. — 작은 학습이, 큰 신호를 잡아냅니다</p>
   </section>
 
-  <!-- PROJECT -->
-  <section class="project" id="project">
+  <!-- 3. M · Multi-agent — 근거 -->
+  <section class="project" id="agents">
     <div class="project-header">
-      <h2>무엇을 만드나?</h2>
+      <p class="section-overline">M · Multi-agent — 근거</p>
+      <h2>근거라는 토양</h2>
       <p class="project-name">머스타드AI</p>
       <p class="project-tagline">9개 AI 에이전트가 종목의 모든 각도를 분석하는 투자 리서치 시스템.</p>
       <p class="project-architecture">기존 정량적 퀀트 모델의 한계(정성적 리스크 오독)와 일반 거대언어모델의 한계(수치적 환각)를 동시에 극복하기 위해, 금융공학과 9개 AI 멀티에이전트의 합의 메커니즘을 융합한 하이브리드 가치평가 아키텍처를 채택하고 있습니다.</p>
@@ -109,14 +152,42 @@
     </div>
 
     <blockquote class="project-quote">
-      "우리는 수익을 보장하지 않습니다. 대신 9가지 관점에서 왜 그렇게 분석했는지 전부 보여드립니다."
+      "이 근거는 정답이 아니라, 당신의 씨앗이 뿌리내릴 토양입니다."
     </blockquote>
   </section>
 
-  <!-- ARCHITECTURE -->
-  <section class="architecture" id="architecture">
+  <!-- 4. U · Understand — 이해 (조셉 스토리) -->
+  <section class="about" id="why">
+    <div class="about-header">
+      <p class="section-overline">U · Understand — 이해</p>
+      <h2>왜 만들었나</h2>
+    </div>
+    <div class="about-body">
+      <p class="about-thesis">투자에서 씨앗은 학습입니다.<br>학습 없는 투자는 뿌리 없는 나무입니다.</p>
+      <p>18년간 금융 투자 분야에서 일했습니다.<br>투자 플랫폼을 기획하고 운영했고, 퀀트 알고리즘을 설계했으며, 구조화 상품을 만들었습니다.</p>
+      <p>지금은 루카텍에서 AI가 투자 판단의 근거를 만들어주는 리서치 플랫폼을 개발하고 있습니다. 근거를 "받아먹는" 걸로 끝내지 않고, 왜 그런 판단이 나왔는지 스스로 이해하는 것 — 거기서 진짜 투자가 시작된다고 믿습니다.</p>
+    </div>
+  </section>
+
+  <!-- 5. S · Study — 함께 (얇은 섹션) -->
+  <section class="thin-section" id="study">
+    <p class="section-overline">S · Study — 함께</p>
+    <h2 class="thin-headline">혼자 크는 나무는 없습니다</h2>
+    <p class="thin-body">머스타드AI는 강의가 아니라 <strong>투자 스터디그룹</strong>입니다.<br>질문하고, 검증하고, 서로의 해석을 비교하며 함께 성장합니다.<br>AI융합학과 교수, CTO, 애널리스트가 함께하는 스터디.</p>
+  </section>
+
+  <!-- 6. T · Thesis — 원칙 (pivot, 배경 반전) -->
+  <section class="thin-section thin-section--pivot" id="thesis">
+    <p class="section-overline section-overline--light">T · Thesis — 원칙</p>
+    <h2 class="thin-headline">씨앗이 땅을 뚫고<br>줄기가 되는 순간</h2>
+    <p class="thin-body">배우는 사람에서, 자기 기준을 가진 투자자로.<br>"나는 이런 종목에, 이런 조건일 때, 이렇게 접근한다."<br>시장이 요동쳐도 내 원칙은 변하지 않습니다.</p>
+  </section>
+
+  <!-- 7. A · Agentic — 구현 (아키텍처) -->
+  <section class="architecture" id="agentic">
+    <p class="section-overline">A · Agentic — 구현</p>
     <h2>시스템 아키텍처</h2>
-    <p class="architecture-sub">데이터에서 근거까지, 모든 과정이 투명합니다.</p>
+    <p class="architecture-sub">우리가 이렇게 만들었듯, 당신의 원칙도 에이전트가 됩니다.</p>
 
     <div class="flow">
       <!-- 1. 데이터 소스 -->
@@ -192,8 +263,44 @@
     </div>
   </section>
 
-  <!-- NOW -->
+  <!-- 8. R · Resilience — 안정 (얇은 섹션) -->
+  <section class="thin-section" id="resilience">
+    <p class="section-overline">R · Resilience — 안정</p>
+    <h2 class="thin-headline">폭풍이 불어도<br>나무는 뿌리로 버팁니다</h2>
+    <p class="thin-body">시장이 폭락해도, 뉴스가 요란해도, 커뮤니티가 공포에 빠져도<br>내 시스템이 내는 신호를 따를 뿐입니다.<br>흔들리지 않는 구조 — 그것이 Resilience입니다.</p>
+    <blockquote class="project-quote thin-quote">
+      "우리는 수익을 보장하지 않습니다. 대신 9가지 관점에서 왜 그렇게 분석했는지 전부 보여드립니다."
+    </blockquote>
+  </section>
+
+  <!-- 9. D · Develop — 성장 (투자자의 순환) -->
+  <section class="thin-section" id="develop">
+    <p class="section-overline">D · Develop — 성장</p>
+    <h2 class="thin-headline">열매를 맺은 투자자는<br>멈추지 않습니다</h2>
+    <p class="thin-body">수확한 열매가 다시 씨앗이 되어 더 깊은 학습으로 —<br>MUSTARD는 한 바퀴로 끝나지 않는 순환입니다.</p>
+
+    <div class="cycle-diagram">
+      <div class="cycle-ring">
+        <a href="#agents" class="cycle-node cycle-node-1"><b>M</b><i>근거</i></a>
+        <a href="#why" class="cycle-node cycle-node-2"><b>U</b><i>이해</i></a>
+        <a href="#study" class="cycle-node cycle-node-3"><b>S</b><i>함께</i></a>
+        <a href="#thesis" class="cycle-node cycle-node-4 cycle-node--pivot"><b>T</b><i>원칙</i></a>
+        <a href="#agentic" class="cycle-node cycle-node-5"><b>A</b><i>구현</i></a>
+        <a href="#resilience" class="cycle-node cycle-node-6"><b>R</b><i>안정</i></a>
+        <a href="#develop" class="cycle-node cycle-node-7"><b>D</b><i>성장</i></a>
+        <div class="cycle-center">
+          <span class="cycle-seed">🌱</span>
+          <span class="cycle-label">순환</span>
+        </div>
+        <div class="cycle-arrow">⟳</div>
+      </div>
+    </div>
+    <p class="now-cycle">D의 열매는, 다시 M의 씨앗이 됩니다.</p>
+  </section>
+
+  <!-- 9-2. 현재 진행 중 (회사 소식 — 7단계 밖 별도 섹션) -->
   <section class="now" id="now">
+    <p class="section-overline">Now — 회사 소식</p>
     <h2>현재 진행 중</h2>
     <div class="now-list">
       <div class="now-card">
@@ -215,10 +322,19 @@
     </div>
   </section>
 
-  <!-- CONTACT -->
-  <section class="contact" id="contact">
-    <h2>사업제휴 및 연락처</h2>
+  <!-- 10. 참여하기 + 클로징 -->
+  <section class="contact" id="join">
+    <div class="closing">
+      <p class="closing-en">No seed, no fruit.</p>
+      <h2 class="closing-headline">씨앗 없이는, 열매도 없다.</h2>
+      <p class="closing-lead">당신의 겨자씨는 이미 준비되어 있습니다.<br>오늘, 씨앗을 심으세요.</p>
+    </div>
     <div class="contact-center">
+      <div class="join-btns">
+        <a href="mailto:febrilejoseph@gmail.com?subject=[머스타드AI] 스터디 참여 문의" class="btn-join btn-join--primary">스터디 참여</a>
+        <a href="mailto:febrilejoseph@gmail.com?subject=[머스타드AI] 사업 제휴 문의" class="btn-join">사업 제휴</a>
+        <a href="mailto:febrilejoseph@gmail.com?subject=[머스타드AI] 투자 문의" class="btn-join">투자 문의</a>
+      </div>
       <a href="mailto:febrilejoseph@gmail.com" class="email-link">febrilejoseph@gmail.com</a>
       <div class="contact-links">
         <a href="https://linkedin.com/" target="_blank">LinkedIn</a>
@@ -230,10 +346,6 @@
   <footer>
     <p>&copy; 2026 Joseph Cho. Built with Mustard AI &mdash; Lucatec Inc.</p>
   </footer>
-
-  <script>
-    document.querySelector('.year').textContent = new Date().getFullYear();
-  </script>
 
 </body>
 </html>

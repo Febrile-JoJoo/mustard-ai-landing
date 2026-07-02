@@ -804,3 +804,497 @@ footer p {
     padding: 6rem 1.5rem;
   }
 }
+
+/* ============================================
+   v2 — MUSTARD 7단계 · 슬로건 · 씨앗 서사
+   ============================================ */
+
+/* HERO 슬로건 */
+.hero-slogan-en {
+  font-size: clamp(1rem, 2vw, 1.4rem);
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #FFE082;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.35);
+  margin-bottom: 1rem;
+}
+
+/* 섹션 오버라인 */
+.section-overline {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: #5C3D00;
+  text-transform: uppercase;
+  margin-bottom: 0.8rem;
+}
+
+.section-overline--light {
+  color: #FFE082;
+}
+
+/* MUSTARD 7단계 띠 */
+.mustard-band {
+  padding: 7rem 3rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.band-title {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 800;
+  color: var(--black);
+  letter-spacing: -0.02em;
+  margin-bottom: 0.4rem;
+}
+
+.band-sub {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  margin-bottom: 3rem;
+}
+
+.band-track {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.6rem;
+  background: linear-gradient(90deg, rgba(0,0,0,0.03), rgba(45,32,6,0.14));
+  border-radius: var(--radius-lg);
+  padding: 1.6rem 1rem 1.4rem;
+}
+
+.band-step {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.15rem;
+  text-decoration: none;
+  padding: 0.8rem 0.3rem;
+  border-radius: var(--radius);
+  transition: background 0.25s, transform 0.25s;
+}
+
+.band-step:hover {
+  background: rgba(0, 0, 0, 0.07);
+  transform: translateY(-4px);
+}
+
+.band-initial {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 900;
+  color: #B8860B;
+  line-height: 1.1;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.35);
+}
+
+.band-word {
+  font-size: clamp(0.6rem, 1.2vw, 0.85rem);
+  font-weight: 700;
+  color: #5C3D00;
+  letter-spacing: 0.02em;
+}
+
+.band-ko {
+  font-size: clamp(0.7rem, 1.3vw, 0.9rem);
+  font-weight: 600;
+  color: var(--text-body);
+}
+
+/* T pivot 강조 */
+.band-step--pivot {
+  background: rgba(45, 32, 6, 0.9);
+  box-shadow: 0 0 0 3px #B8860B;
+}
+
+.band-step--pivot .band-initial { color: #FFD700; text-shadow: none; }
+.band-step--pivot .band-word { color: #FFE082; }
+.band-step--pivot .band-ko { color: #FFF8E1; }
+
+.band-step--pivot:hover {
+  background: rgba(45, 32, 6, 1);
+}
+
+/* 호버 툴팁 */
+.band-step::after {
+  content: attr(data-tip);
+  position: absolute;
+  bottom: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%) translateY(4px);
+  background: #2D2006;
+  color: #FFF8E1;
+  font-size: 0.78rem;
+  font-weight: 500;
+  line-height: 1.5;
+  padding: 0.5rem 0.9rem;
+  border-radius: 8px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s, transform 0.2s;
+  z-index: 10;
+}
+
+.band-step:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.band-growth {
+  margin-top: 1.6rem;
+  font-size: 1.3rem;
+  letter-spacing: 0.05em;
+  color: #5C3D00;
+  opacity: 0.75;
+}
+
+.band-slogan {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #5C3D00;
+}
+
+/* 얇은 문장 섹션 (S · R) */
+.thin-section {
+  padding: 6rem 3rem;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.thin-headline {
+  font-size: clamp(1.6rem, 3.5vw, 2.3rem);
+  font-weight: 800;
+  color: var(--black);
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.4rem;
+}
+
+.thin-body {
+  font-size: 1.15rem;
+  color: var(--text-body);
+  line-height: 1.9;
+}
+
+.thin-quote {
+  margin-top: 2.5rem;
+  text-align: left;
+}
+
+/* T pivot 섹션 — 배경 반전 */
+.thin-section--pivot {
+  max-width: none;
+  background: #2D2006;
+  padding: 7rem 3rem;
+}
+
+.thin-section--pivot .thin-headline {
+  color: #FFD700;
+}
+
+.thin-section--pivot .thin-body {
+  color: rgba(255, 248, 225, 0.88);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* D 순환 회수 문장 */
+.now-cycle {
+  margin-top: 2.5rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  font-style: italic;
+  color: #5C3D00;
+  text-align: center;
+}
+
+/* 클로징 (섹션 10) */
+.closing {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.closing-en {
+  font-size: clamp(0.9rem, 1.6vw, 1.15rem);
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #5C3D00;
+  margin-bottom: 0.8rem;
+}
+
+.closing-headline {
+  font-size: clamp(1.9rem, 4.5vw, 3rem);
+  font-weight: 900;
+  color: var(--black);
+  letter-spacing: -0.02em;
+  margin-bottom: 1.2rem;
+}
+
+.closing-lead {
+  font-size: 1.2rem;
+  color: var(--text-body);
+  line-height: 1.9;
+}
+
+/* 참여 버튼 3종 */
+.join-btns {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.btn-join {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #5C3D00;
+  background: transparent;
+  border: 2px solid #5C3D00;
+  padding: 14px 30px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+
+.btn-join:hover {
+  background: #5C3D00;
+  color: var(--white);
+  transform: translateY(-2px);
+}
+
+.btn-join--primary {
+  background: #2D2006;
+  border-color: #2D2006;
+  color: #FFD700;
+}
+
+.btn-join--primary:hover {
+  background: #1A1000;
+  border-color: #1A1000;
+  color: #FFE082;
+}
+
+/* v2 모바일 */
+@media (max-width: 768px) {
+  .mustard-band {
+    padding: 4.5rem 1rem;
+  }
+
+  .band-track {
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 1rem;
+  }
+
+  .band-step::after {
+    display: none;
+  }
+
+  .thin-section {
+    padding: 4rem 1.5rem;
+  }
+
+  .thin-section--pivot {
+    padding: 5rem 1.5rem;
+  }
+
+  .join-btns {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn-join {
+    text-align: center;
+  }
+}
+
+/* ============================================
+   v2.1 — 겨자씨 의미 · 앵커 보정 · 순환 다이어그램
+   ============================================ */
+
+/* 앵커 이동 시 고정 NAV(72px)에 안 가리게 보정 */
+html {
+  scroll-padding-top: 90px;
+}
+
+/* 왜 겨자씨인가 블록 */
+.mustard-why {
+  max-width: 700px;
+  margin: 0 auto 5rem;
+  padding: 3rem 2.5rem;
+  background: rgba(0, 0, 0, 0.05);
+  border: 1.5px solid rgba(0, 0, 0, 0.12);
+  border-radius: var(--radius-lg);
+}
+
+.mustard-why .band-title {
+  margin-bottom: 1.5rem;
+}
+
+.why-body {
+  font-size: 1.15rem;
+  color: var(--text-body);
+  line-height: 1.9;
+  margin-bottom: 1.2rem;
+}
+
+.why-body:last-child {
+  margin-bottom: 0;
+}
+
+.why-body--strong {
+  font-weight: 700;
+  color: #5C3D00;
+}
+
+/* 띠 회귀 화살표 */
+.band-return {
+  display: inline-block;
+  margin-left: 0.8rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #5C3D00;
+  opacity: 1;
+}
+
+/* 순환 다이어그램 (D 섹션) */
+.cycle-diagram {
+  display: flex;
+  justify-content: center;
+  margin: 3.5rem 0 2rem;
+}
+
+.cycle-ring {
+  position: relative;
+  width: 340px;
+  height: 340px;
+  border: 3px dashed rgba(92, 61, 0, 0.4);
+  border-radius: 50%;
+}
+
+.cycle-node {
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: -32px 0 0 -32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #FFF8E1;
+  border: 2px solid #B8860B;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.cycle-node:hover {
+  transform: scale(1.12);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  z-index: 5;
+}
+
+.cycle-node b {
+  font-size: 1.25rem;
+  font-weight: 900;
+  color: #B8860B;
+  line-height: 1.1;
+}
+
+.cycle-node i {
+  font-style: normal;
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: var(--text-body);
+}
+
+.cycle-node--pivot {
+  background: #2D2006;
+  border-color: #FFD700;
+}
+
+.cycle-node--pivot b { color: #FFD700; }
+.cycle-node--pivot i { color: #FFF8E1; }
+
+/* 7개 노드 시계방향 원형 배치 (12시부터) */
+.cycle-node-1 { top: 0%;     left: 50%; }
+.cycle-node-2 { top: 19.4%;  left: 89.1%; }
+.cycle-node-3 { top: 61.1%;  left: 98.7%; }
+.cycle-node-4 { top: 95%;    left: 71.7%; }
+.cycle-node-5 { top: 95%;    left: 28.3%; }
+.cycle-node-6 { top: 61.1%;  left: 1.3%; }
+.cycle-node-7 { top: 19.4%;  left: 10.9%; }
+
+.cycle-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.cycle-seed {
+  font-size: 2.2rem;
+}
+
+.cycle-label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #5C3D00;
+  letter-spacing: 0.15em;
+}
+
+.cycle-arrow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 21rem;
+  line-height: 1;
+  color: rgba(92, 61, 0, 0.10);
+  pointer-events: none;
+  user-select: none;
+}
+
+/* v2.1 모바일 */
+@media (max-width: 768px) {
+  html {
+    scroll-padding-top: 140px; /* 모바일 NAV 2줄 높이 보정 */
+  }
+
+  .mustard-why {
+    padding: 2rem 1.4rem;
+    margin-bottom: 3.5rem;
+  }
+
+  .band-return {
+    display: block;
+    margin: 0.6rem 0 0;
+  }
+
+  .cycle-ring {
+    width: 270px;
+    height: 270px;
+  }
+
+  .cycle-node {
+    width: 54px;
+    height: 54px;
+    margin: -27px 0 0 -27px;
+  }
+
+  .cycle-node b { font-size: 1.05rem; }
+  .cycle-node i { font-size: 0.6rem; }
+
+  .cycle-arrow { font-size: 15rem; }
+}
