@@ -26,9 +26,41 @@
 
   <!-- 1. HERO — No seed, no fruit. -->
   <section class="hero">
-    <div class="hero-bg hero-bg-1"></div>
-    <div class="hero-bg hero-bg-2"></div>
-    <div class="hero-bg hero-bg-3"></div>
+    <svg class="hero-tree" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+      <!-- 지면 라인 -->
+      <path class="t-ground" d="M 80 720 Q 400 710 620 716 T 1140 712" />
+      <!-- 씨앗 -->
+      <circle class="t-seed" cx="640" cy="712" r="7" />
+      <!-- 몸통 줄기 (비대칭 곡선) -->
+      <path class="t-trunk" d="M 640 714 C 636 640 652 590 644 520 C 638 460 660 420 654 350" />
+      <!-- 주 가지들 (좌우 비대칭) -->
+      <path class="t-branch t-b1" d="M 646 560 C 600 530 560 526 500 500 C 460 483 430 480 396 452" />
+      <path class="t-branch t-b2" d="M 648 470 C 700 440 740 442 800 410 C 840 388 866 388 900 360" />
+      <path class="t-branch t-b3" d="M 654 380 C 620 340 600 330 566 290 C 544 264 540 250 520 220" />
+      <path class="t-branch t-b4" d="M 654 360 C 690 320 712 312 740 270 C 760 240 764 228 780 200" />
+      <path class="t-branch t-b5" d="M 655 352 C 650 300 660 270 652 220 C 648 190 654 170 650 140" />
+      <!-- 잔가지 -->
+      <path class="t-twig t-t1" d="M 500 500 C 490 470 494 456 480 430" />
+      <path class="t-twig t-t2" d="M 800 410 C 812 380 810 366 826 340" />
+      <path class="t-twig t-t3" d="M 566 290 C 548 272 542 262 528 250" />
+      <path class="t-twig t-t4" d="M 740 270 C 754 250 758 240 770 226" />
+      <!-- 잎 (선화 타원) -->
+      <ellipse class="t-leaf t-l1" cx="392" cy="446" rx="16" ry="7" transform="rotate(-38 392 446)" />
+      <ellipse class="t-leaf t-l2" cx="478" cy="424" rx="13" ry="6" transform="rotate(-64 478 424)" />
+      <ellipse class="t-leaf t-l3" cx="904" cy="354" rx="16" ry="7" transform="rotate(32 904 354)" />
+      <ellipse class="t-leaf t-l4" cx="830" cy="334" rx="13" ry="6" transform="rotate(58 830 334)" />
+      <ellipse class="t-leaf t-l5" cx="516" cy="214" rx="15" ry="7" transform="rotate(-52 516 214)" />
+      <ellipse class="t-leaf t-l6" cx="526" cy="244" rx="11" ry="5" transform="rotate(-30 526 244)" />
+      <ellipse class="t-leaf t-l7" cx="784" cy="194" rx="15" ry="7" transform="rotate(48 784 194)" />
+      <ellipse class="t-leaf t-l8" cx="774" cy="222" rx="11" ry="5" transform="rotate(24 774 222)" />
+      <ellipse class="t-leaf t-l9" cx="649" cy="132" rx="16" ry="7" transform="rotate(-8 649 132)" />
+      <!-- 떠다니는 겨자씨 알갱이 -->
+      <circle class="t-spore t-s1" cx="470" cy="380" r="3.2" />
+      <circle class="t-spore t-s2" cx="760" cy="320" r="2.6" />
+      <circle class="t-spore t-s3" cx="600" cy="250" r="2.2" />
+      <circle class="t-spore t-s4" cx="700" cy="180" r="3" />
+      <circle class="t-spore t-s5" cx="540" cy="330" r="2.4" />
+    </svg>
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <p class="hero-slogan-en">No seed, no fruit.</p>
