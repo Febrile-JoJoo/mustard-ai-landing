@@ -975,20 +975,7 @@ footer p {
   text-align: left;
 }
 
-/* T pivot 섹션 — 배경 반전 */
-.thin-section--pivot {
-  max-width: none;
-  background: #2D2006;
-  padding: 7rem 3rem;
-}
-
-.thin-section--pivot .thin-headline {
-  color: #FFD700;
-}
-
-.thin-section--pivot .thin-body {
-  color: rgba(255, 248, 225, 0.88);
-}
+/* (v2.3) T pivot 배경 반전 제거 — 7개 섹션 스타일 통일 */
 
 /* D 순환 회수 문장 */
 .now-cycle {
@@ -1279,4 +1266,50 @@ html {
   .cycle-node i { font-size: 0.6rem; }
 
   .cycle-arrow { font-size: 15rem; }
+}
+
+/* ============================================
+   v2.3 — 단계 배지 (숫자 + 박스, 7개 섹션 공통)
+   ============================================ */
+
+.step-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  background: #2D2006;
+  color: #FFE082;
+  font-size: 1.05rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  padding: 0.6rem 1.3rem 0.6rem 0.6rem;
+  border-radius: 10px;
+  margin-bottom: 1.4rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.step-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  background: #E1AD01;
+  color: #2D2006;
+  font-size: 1.1rem;
+  font-weight: 900;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .step-badge {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem 0.5rem 0.5rem;
+  }
+
+  .step-num {
+    width: 28px;
+    height: 28px;
+    font-size: 0.95rem;
+  }
 }
