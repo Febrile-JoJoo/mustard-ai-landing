@@ -27,39 +27,264 @@
   <!-- 1. HERO — No seed, no fruit. -->
   <section class="hero">
     <svg class="hero-tree" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
-      <!-- 지면 라인 -->
       <path class="t-ground" d="M 80 720 Q 400 710 620 716 T 1140 712" />
-      <!-- 씨앗 -->
       <circle class="t-seed" cx="640" cy="712" r="7" />
-      <!-- 몸통 줄기 (비대칭 곡선) -->
-      <path class="t-trunk" d="M 640 714 C 636 640 652 590 644 520 C 638 460 660 420 654 350" />
-      <!-- 주 가지들 (좌우 비대칭) -->
-      <path class="t-branch t-b1" d="M 646 560 C 600 530 560 526 500 500 C 460 483 430 480 396 452" />
-      <path class="t-branch t-b2" d="M 648 470 C 700 440 740 442 800 410 C 840 388 866 388 900 360" />
-      <path class="t-branch t-b3" d="M 654 380 C 620 340 600 330 566 290 C 544 264 540 250 520 220" />
-      <path class="t-branch t-b4" d="M 654 360 C 690 320 712 312 740 270 C 760 240 764 228 780 200" />
-      <path class="t-branch t-b5" d="M 655 352 C 650 300 660 270 652 220 C 648 190 654 170 650 140" />
-      <!-- 잔가지 -->
-      <path class="t-twig t-t1" d="M 500 500 C 490 470 494 456 480 430" />
-      <path class="t-twig t-t2" d="M 800 410 C 812 380 810 366 826 340" />
-      <path class="t-twig t-t3" d="M 566 290 C 548 272 542 262 528 250" />
-      <path class="t-twig t-t4" d="M 740 270 C 754 250 758 240 770 226" />
-      <!-- 잎 (선화 타원) -->
-      <ellipse class="t-leaf t-l1" cx="392" cy="446" rx="16" ry="7" transform="rotate(-38 392 446)" />
-      <ellipse class="t-leaf t-l2" cx="478" cy="424" rx="13" ry="6" transform="rotate(-64 478 424)" />
-      <ellipse class="t-leaf t-l3" cx="904" cy="354" rx="16" ry="7" transform="rotate(32 904 354)" />
-      <ellipse class="t-leaf t-l4" cx="830" cy="334" rx="13" ry="6" transform="rotate(58 830 334)" />
-      <ellipse class="t-leaf t-l5" cx="516" cy="214" rx="15" ry="7" transform="rotate(-52 516 214)" />
-      <ellipse class="t-leaf t-l6" cx="526" cy="244" rx="11" ry="5" transform="rotate(-30 526 244)" />
-      <ellipse class="t-leaf t-l7" cx="784" cy="194" rx="15" ry="7" transform="rotate(48 784 194)" />
-      <ellipse class="t-leaf t-l8" cx="774" cy="222" rx="11" ry="5" transform="rotate(24 774 222)" />
-      <ellipse class="t-leaf t-l9" cx="649" cy="132" rx="16" ry="7" transform="rotate(-8 649 132)" />
-      <!-- 떠다니는 겨자씨 알갱이 -->
-      <circle class="t-spore t-s1" cx="470" cy="380" r="3.2" />
-      <circle class="t-spore t-s2" cx="760" cy="320" r="2.6" />
-      <circle class="t-spore t-s3" cx="600" cy="250" r="2.2" />
-      <circle class="t-spore t-s4" cx="700" cy="180" r="3" />
-      <circle class="t-spore t-s5" cx="540" cy="330" r="2.4" />
+      <path class="dt-trunk" style="animation-delay:1.00s" d="M 640 712 Q 604 628 643 557" />
+      <path class="dt-trunk" style="animation-delay:1.45s" d="M 643 557 Q 646 503 699 453" />
+      <path class="dt-trunk" style="animation-delay:1.90s" d="M 699 453 Q 714 429 751 401" />
+      <path class="dt-branch" style="animation-delay:2.35s" d="M 751 401 Q 763 393 802 379" />
+      <path class="dt-branch" style="animation-delay:2.80s" d="M 802 379 Q 820 375 845 378" />
+      <path class="dt-twig" style="animation-delay:3.25s" d="M 845 378 Q 863 385 873 392" />
+      <path class="dt-twig" style="animation-delay:3.70s" d="M 873 392 Q 880 399 891 409" />
+      <path class="dt-twig" style="animation-delay:3.70s" d="M 873 392 Q 885 393 895 394" />
+      <path class="dt-twig" style="animation-delay:3.25s" d="M 845 378 Q 864 375 871 369" />
+      <path class="dt-twig" style="animation-delay:3.70s" d="M 871 369 Q 876 372 889 375" />
+      <path class="dt-branch" style="animation-delay:2.80s" d="M 802 379 Q 816 364 821 349" />
+      <path class="dt-twig" style="animation-delay:3.25s" d="M 821 349 Q 838 342 842 337" />
+      <path class="dt-twig" style="animation-delay:3.70s" d="M 842 337 Q 853 335 859 332" />
+      <path class="dt-twig" style="animation-delay:3.70s" d="M 842 337 Q 845 332 854 325" />
+      <path class="dt-twig" style="animation-delay:3.25s" d="M 821 349 Q 816 337 820 324" />
+      <path class="dt-twig" style="animation-delay:3.70s" d="M 820 324 Q 824 314 827 307" />
+      <path class="dt-branch" style="animation-delay:2.35s" d="M 751 401 Q 766 379 763 348" />
+      <path class="dt-branch" style="animation-delay:2.80s" d="M 763 348 Q 768 331 787 313" />
+      <path class="dt-twig" style="animation-delay:3.25s" d="M 787 313 Q 805 310 817 304" />
+      <path class="dt-twig" style="animation-delay:3.70s" d="M 817 304 Q 823 307 838 311" />
+      <path class="dt-twig" style="animation-delay:3.70s" d="M 817 304 Q 823 297 834 291" />
+      <path class="dt-twig" style="animation-delay:3.25s" d="M 787 313 Q 791 299 790 287" />
+      <path class="dt-twig" style="animation-delay:3.70s" d="M 790 287 Q 793 278 803 270" />
+      <path class="dt-twig" style="animation-delay:3.70s" d="M 790 287 Q 789 276 781 269" />
+      <path class="dt-branch" style="animation-delay:2.80s" d="M 763 348 Q 750 329 754 312" />
+      <path class="dt-twig" style="animation-delay:3.25s" d="M 754 312 Q 756 302 760 287" />
+      <path class="dt-twig" style="animation-delay:3.70s" d="M 760 287 Q 766 280 771 272" />
+      <path class="dt-twig" style="animation-delay:3.70s" d="M 760 287 Q 756 275 760 267" />
+      <path class="dt-twig" style="animation-delay:3.25s" d="M 754 312 Q 746 301 736 291" />
+      <path class="dt-twig" style="animation-delay:3.70s" d="M 736 291 Q 735 282 730 274" />
+      <path class="dt-twig" style="animation-delay:3.70s" d="M 736 291 Q 724 287 719 284" />
+      <path class="dt-trunk" style="animation-delay:1.90s" d="M 699 453 Q 720 404 703 367" />
+      <path class="dt-branch" style="animation-delay:2.35s" d="M 703 367 Q 715 343 721 313" />
+      <path class="dt-branch" style="animation-delay:2.80s" d="M 721 313 Q 742 301 746 283" />
+      <path class="dt-twig" style="animation-delay:3.25s" d="M 746 283 Q 760 277 767 270" />
+      <path class="dt-twig" style="animation-delay:3.70s" d="M 767 270 Q 773 270 785 267" />
+      <path class="dt-twig" style="animation-delay:3.70s" d="M 767 270 Q 776 264 779 255" />
+      <path class="dt-twig" style="animation-delay:3.25s" d="M 746 283 Q 761 272 761 256" />
+      <path class="dt-twig" style="animation-delay:3.70s" d="M 761 256 Q 773 251 778 241" />
+      <path class="dt-twig" style="animation-delay:3.70s" d="M 761 256 Q 760 244 761 234" />
+      <path class="dt-branch" style="animation-delay:2.80s" d="M 721 313 Q 723 295 724 275" />
+      <path class="dt-twig" style="animation-delay:3.25s" d="M 724 275 Q 727 262 738 249" />
+      <path class="dt-twig" style="animation-delay:3.70s" d="M 738 249 Q 745 244 754 234" />
+      <path class="dt-twig" style="animation-delay:3.70s" d="M 738 249 Q 743 240 744 229" />
+      <path class="dt-twig" style="animation-delay:3.25s" d="M 724 275 Q 717 260 715 248" />
+      <path class="dt-twig" style="animation-delay:3.70s" d="M 715 248 Q 718 238 718 230" />
+      <path class="dt-twig" style="animation-delay:3.70s" d="M 715 248 Q 711 240 703 232" />
+      <path class="dt-branch" style="animation-delay:2.35s" d="M 703 367 Q 706 339 684 316" />
+      <path class="dt-branch" style="animation-delay:2.80s" d="M 684 316 Q 694 300 687 282" />
+      <path class="dt-twig" style="animation-delay:3.25s" d="M 687 282 Q 697 272 702 263" />
+      <path class="dt-twig" style="animation-delay:3.70s" d="M 702 263 Q 712 256 717 253" />
+      <path class="dt-twig" style="animation-delay:3.70s" d="M 702 263 Q 705 254 708 246" />
+      <path class="dt-twig" style="animation-delay:3.25s" d="M 687 282 Q 684 273 677 262" />
+      <path class="dt-twig" style="animation-delay:3.70s" d="M 677 262 Q 675 254 676 247" />
+      <path class="dt-twig" style="animation-delay:3.70s" d="M 677 262 Q 671 255 666 251" />
+      <path class="dt-branch" style="animation-delay:2.80s" d="M 684 316 Q 677 307 655 293" />
+      <path class="dt-twig" style="animation-delay:3.25s" d="M 655 293 Q 650 278 646 266" />
+      <path class="dt-twig" style="animation-delay:3.70s" d="M 646 266 Q 642 256 646 247" />
+      <path class="dt-twig" style="animation-delay:3.70s" d="M 646 266 Q 642 258 632 252" />
+      <path class="dt-twig" style="animation-delay:3.25s" d="M 655 293 Q 644 293 632 288" />
+      <path class="dt-twig" style="animation-delay:3.70s" d="M 632 288 Q 625 288 615 290" />
+      <path class="dt-trunk" style="animation-delay:1.45s" d="M 643 557 Q 642 497 587 455" />
+      <path class="dt-trunk" style="animation-delay:1.90s" d="M 587 455 Q 575 414 572 366" />
+      <path class="dt-branch" style="animation-delay:2.35s" d="M 572 366 Q 587 342 586 311" />
+      <path class="dt-branch" style="animation-delay:2.80s" d="M 586 311 Q 597 294 613 278" />
+      <path class="dt-twig" style="animation-delay:3.25s" d="M 613 278 Q 633 268 642 263" />
+      <path class="dt-twig" style="animation-delay:3.70s" d="M 642 263 Q 656 266 664 266" />
+      <path class="dt-twig" style="animation-delay:3.70s" d="M 642 263 Q 649 256 657 247" />
+      <path class="dt-twig" style="animation-delay:3.25s" d="M 613 278 Q 618 261 622 249" />
+      <path class="dt-twig" style="animation-delay:3.70s" d="M 622 249 Q 632 241 639 234" />
+      <path class="dt-branch" style="animation-delay:2.80s" d="M 586 311 Q 580 293 577 271" />
+      <path class="dt-twig" style="animation-delay:3.25s" d="M 577 271 Q 574 257 582 245" />
+      <path class="dt-twig" style="animation-delay:3.70s" d="M 582 245 Q 590 239 595 234" />
+      <path class="dt-twig" style="animation-delay:3.25s" d="M 577 271 Q 575 261 561 249" />
+      <path class="dt-twig" style="animation-delay:3.70s" d="M 561 249 Q 556 242 554 232" />
+      <path class="dt-twig" style="animation-delay:3.70s" d="M 561 249 Q 559 242 548 238" />
+      <path class="dt-branch" style="animation-delay:2.35s" d="M 572 366 Q 555 344 531 315" />
+      <path class="dt-branch" style="animation-delay:2.80s" d="M 531 315 Q 517 290 518 270" />
+      <path class="dt-twig" style="animation-delay:3.25s" d="M 518 270 Q 514 252 517 237" />
+      <path class="dt-twig" style="animation-delay:3.70s" d="M 517 237 Q 526 226 528 214" />
+      <path class="dt-twig" style="animation-delay:3.70s" d="M 517 237 Q 508 230 502 220" />
+      <path class="dt-twig" style="animation-delay:3.25s" d="M 518 270 Q 510 253 499 242" />
+      <path class="dt-twig" style="animation-delay:3.70s" d="M 499 242 Q 507 229 501 215" />
+      <path class="dt-branch" style="animation-delay:2.80s" d="M 531 315 Q 508 304 486 295" />
+      <path class="dt-twig" style="animation-delay:3.25s" d="M 486 295 Q 472 285 459 273" />
+      <path class="dt-twig" style="animation-delay:3.70s" d="M 459 273 Q 453 265 450 252" />
+      <path class="dt-twig" style="animation-delay:3.70s" d="M 459 273 Q 442 271 435 271" />
+      <path class="dt-twig" style="animation-delay:3.25s" d="M 486 295 Q 464 297 453 298" />
+      <path class="dt-twig" style="animation-delay:3.70s" d="M 453 298 Q 438 295 432 288" />
+      <path class="dt-twig" style="animation-delay:3.70s" d="M 453 298 Q 445 301 431 308" />
+      <path class="dt-trunk" style="animation-delay:1.90s" d="M 587 455 Q 551 429 531 401" />
+      <path class="dt-branch" style="animation-delay:2.35s" d="M 531 401 Q 519 375 515 349" />
+      <path class="dt-branch" style="animation-delay:2.80s" d="M 515 349 Q 521 331 519 313" />
+      <path class="dt-twig" style="animation-delay:3.25s" d="M 519 313 Q 528 303 532 290" />
+      <path class="dt-twig" style="animation-delay:3.70s" d="M 532 290 Q 544 286 548 284" />
+      <path class="dt-twig" style="animation-delay:3.70s" d="M 532 290 Q 535 281 529 272" />
+      <path class="dt-twig" style="animation-delay:3.25s" d="M 519 313 Q 511 303 513 292" />
+      <path class="dt-twig" style="animation-delay:3.70s" d="M 513 292 Q 509 288 502 281" />
+      <path class="dt-branch" style="animation-delay:2.80s" d="M 515 349 Q 496 331 490 318" />
+      <path class="dt-twig" style="animation-delay:3.25s" d="M 490 318 Q 488 303 483 291" />
+      <path class="dt-twig" style="animation-delay:3.70s" d="M 483 291 Q 484 282 490 272" />
+      <path class="dt-twig" style="animation-delay:3.70s" d="M 483 291 Q 473 282 470 274" />
+      <path class="dt-twig" style="animation-delay:3.25s" d="M 490 318 Q 480 315 461 307" />
+      <path class="dt-twig" style="animation-delay:3.70s" d="M 461 307 Q 459 298 452 290" />
+      <path class="dt-twig" style="animation-delay:3.70s" d="M 461 307 Q 452 309 439 313" />
+      <path class="dt-branch" style="animation-delay:2.35s" d="M 531 401 Q 506 394 480 392" />
+      <path class="dt-branch" style="animation-delay:2.80s" d="M 480 392 Q 460 381 449 365" />
+      <path class="dt-twig" style="animation-delay:3.25s" d="M 449 365 Q 439 352 437 337" />
+      <path class="dt-twig" style="animation-delay:3.70s" d="M 437 337 Q 434 327 442 315" />
+      <path class="dt-twig" style="animation-delay:3.70s" d="M 437 337 Q 426 331 418 324" />
+      <path class="dt-twig" style="animation-delay:3.25s" d="M 449 365 Q 443 360 424 358" />
+      <path class="dt-twig" style="animation-delay:3.70s" d="M 424 358 Q 419 354 410 347" />
+      <path class="dt-branch" style="animation-delay:2.80s" d="M 480 392 Q 462 392 445 396" />
+      <path class="dt-twig" style="animation-delay:3.25s" d="M 445 396 Q 435 389 421 386" />
+      <path class="dt-twig" style="animation-delay:3.70s" d="M 421 386 Q 416 380 408 373" />
+      <path class="dt-twig" style="animation-delay:3.70s" d="M 421 386 Q 413 385 403 383" />
+      <path class="dt-twig" style="animation-delay:3.25s" d="M 445 396 Q 434 402 429 410" />
+      <path class="dt-twig" style="animation-delay:3.70s" d="M 429 410 Q 417 412 414 415" />
+      <line class="dt-link" style="animation-delay:5.05s" x1="548" y1="238" x2="501" y2="215" />
+      <line class="dt-link" style="animation-delay:5.05s" x1="548" y1="238" x2="502" y2="281" />
+      <line class="dt-link" style="animation-delay:5.05s" x1="548" y1="238" x2="501" y2="215" />
+      <line class="dt-link" style="animation-delay:5.05s" x1="548" y1="238" x2="646" y2="247" />
+      <line class="dt-link" style="animation-delay:5.05s" x1="548" y1="238" x2="431" y2="308" />
+      <line class="dt-link" style="animation-delay:5.05s" x1="548" y1="238" x2="439" y2="313" />
+      <line class="dt-link" style="animation-delay:5.05s" x1="548" y1="238" x2="664" y2="266" />
+      <line class="dt-link" style="animation-delay:5.05s" x1="676" y1="247" x2="615" y2="290" />
+      <line class="dt-link" style="animation-delay:5.05s" x1="676" y1="247" x2="771" y2="272" />
+      <line class="dt-link" style="animation-delay:5.05s" x1="676" y1="247" x2="730" y2="274" />
+      <line class="dt-link" style="animation-delay:5.05s" x1="676" y1="247" x2="615" y2="290" />
+      <line class="dt-link" style="animation-delay:5.05s" x1="676" y1="247" x2="754" y2="234" />
+      <line class="dt-link" style="animation-delay:5.05s" x1="676" y1="247" x2="554" y2="232" />
+      <line class="dt-link" style="animation-delay:5.05s" x1="676" y1="247" x2="760" y2="267" />
+      <line class="dt-link" style="animation-delay:5.25s" x1="676" y1="247" x2="744" y2="229" />
+      <line class="dt-link" style="animation-delay:5.25s" x1="676" y1="247" x2="548" y2="284" />
+      <line class="dt-link" style="animation-delay:5.05s" x1="785" y1="267" x2="834" y2="291" />
+      <line class="dt-link" style="animation-delay:5.05s" x1="785" y1="267" x2="657" y2="247" />
+      <line class="dt-link" style="animation-delay:5.05s" x1="785" y1="267" x2="719" y2="284" />
+      <line class="dt-link" style="animation-delay:5.05s" x1="785" y1="267" x2="718" y2="230" />
+      <line class="dt-link" style="animation-delay:5.05s" x1="785" y1="267" x2="717" y2="253" />
+      <line class="dt-link" style="animation-delay:5.05s" x1="785" y1="267" x2="719" y2="284" />
+      <line class="dt-link" style="animation-delay:5.05s" x1="785" y1="267" x2="708" y2="246" />
+      <line class="dt-link" style="animation-delay:5.05s" x1="785" y1="267" x2="827" y2="307" />
+      <line class="dt-link" style="animation-delay:5.05s" x1="785" y1="267" x2="664" y2="266" />
+      <line class="dt-link" style="animation-delay:5.25s" x1="785" y1="267" x2="854" y2="325" />
+      <line class="dt-link" style="animation-delay:5.05s" x1="703" y1="232" x2="615" y2="290" />
+      <line class="dt-link" style="animation-delay:5.05s" x1="703" y1="232" x2="761" y2="234" />
+      <line class="dt-link" style="animation-delay:5.05s" x1="703" y1="232" x2="632" y2="288" />
+      <line class="dt-link" style="animation-delay:5.05s" x1="703" y1="232" x2="632" y2="252" />
+      <line class="dt-link" style="animation-delay:5.05s" x1="703" y1="232" x2="760" y2="267" />
+      <line class="dt-link" style="animation-delay:5.05s" x1="513" y1="292" x2="615" y2="290" />
+      <line class="dt-link" style="animation-delay:5.05s" x1="513" y1="292" x2="442" y2="315" />
+      <line class="dt-link" style="animation-delay:4.60s" x1="513" y1="292" x2="632" y2="288" />
+      <line class="dt-link" style="animation-delay:5.05s" x1="513" y1="292" x2="615" y2="290" />
+      <line class="dt-link" style="animation-delay:5.05s" x1="513" y1="292" x2="554" y2="232" />
+      <line class="dt-link" style="animation-delay:5.05s" x1="513" y1="292" x2="632" y2="252" />
+      <line class="dt-link" style="animation-delay:5.25s" x1="513" y1="292" x2="450" y2="252" />
+      <line class="dt-link" style="animation-delay:5.25s" x1="513" y1="292" x2="418" y2="324" />
+      <line class="dt-link" style="animation-delay:5.05s" x1="439" y1="313" x2="502" y2="281" />
+      <line class="dt-link" style="animation-delay:5.05s" x1="439" y1="313" x2="501" y2="215" />
+      <line class="dt-link" style="animation-delay:5.05s" x1="439" y1="313" x2="529" y2="272" />
+      <line class="dt-link" style="animation-delay:5.05s" x1="439" y1="313" x2="548" y2="238" />
+      <line class="dt-link" style="animation-delay:5.05s" x1="615" y1="290" x2="502" y2="281" />
+      <line class="dt-link" style="animation-delay:5.05s" x1="615" y1="290" x2="708" y2="246" />
+      <line class="dt-link" style="animation-delay:5.05s" x1="615" y1="290" x2="501" y2="215" />
+      <line class="dt-link" style="animation-delay:5.05s" x1="615" y1="290" x2="717" y2="253" />
+      <line class="dt-link" style="animation-delay:5.05s" x1="615" y1="290" x2="718" y2="230" />
+      <line class="dt-link" style="animation-delay:5.05s" x1="615" y1="290" x2="708" y2="246" />
+      <line class="dt-link" style="animation-delay:5.05s" x1="615" y1="290" x2="646" y2="247" />
+      <line class="dt-link" style="animation-delay:5.05s" x1="615" y1="290" x2="502" y2="220" />
+      <line class="dt-link" style="animation-delay:5.05s" x1="615" y1="290" x2="664" y2="266" />
+      <line class="dt-link" style="animation-delay:5.25s" x1="615" y1="290" x2="639" y2="234" />
+      <line class="dt-link" style="animation-delay:5.05s" x1="834" y1="291" x2="779" y2="255" />
+      <line class="dt-link" style="animation-delay:5.05s" x1="891" y1="409" x2="827" y2="307" />
+      <line class="dt-link" style="animation-delay:5.05s" x1="891" y1="409" x2="859" y2="332" />
+      <circle class="dt-node" style="animation-delay:4.45s" cx="548" cy="238" r="2.6" />
+      <circle class="dt-node" style="animation-delay:4.45s" cx="676" cy="247" r="2.6" />
+      <circle class="dt-node" style="animation-delay:4.45s" cx="785" cy="267" r="2.6" />
+      <circle class="dt-node" style="animation-delay:4.45s" cx="703" cy="232" r="2.6" />
+      <circle class="dt-node" style="animation-delay:4.00s" cx="513" cy="292" r="2.6" />
+      <circle class="dt-node" style="animation-delay:4.45s" cx="439" cy="313" r="2.6" />
+      <circle class="dt-node" style="animation-delay:4.45s" cx="615" cy="290" r="2.6" />
+      <circle class="dt-node" style="animation-delay:4.45s" cx="834" cy="291" r="2.6" />
+      <circle class="dt-node" style="animation-delay:4.45s" cx="891" cy="409" r="2.6" />
+      <circle class="dt-node" style="animation-delay:4.45s" cx="554" cy="232" r="2.6" />
+      <circle class="dt-node" style="animation-delay:4.45s" cx="771" cy="272" r="2.6" />
+      <circle class="dt-node" style="animation-delay:4.45s" cx="442" cy="315" r="2.6" />
+      <circle class="dt-node" style="animation-delay:4.45s" cx="529" cy="272" r="2.6" />
+      <circle class="dt-node" style="animation-delay:4.45s" cx="703" cy="232" r="2.6" />
+      <circle class="dt-node" style="animation-delay:4.45s" cx="657" cy="247" r="2.6" />
+      <circle class="dt-node" style="animation-delay:4.45s" cx="501" cy="215" r="2.6" />
+      <circle class="dt-node" style="animation-delay:4.45s" cx="595" cy="234" r="2.6" />
+      <circle class="dt-node" style="animation-delay:4.45s" cx="730" cy="274" r="2.6" />
+      <circle class="dt-node" style="animation-delay:4.45s" cx="781" cy="269" r="2.6" />
+      <circle class="dt-node" style="animation-delay:4.45s" cx="657" cy="247" r="2.6" />
+      <circle class="dt-node" style="animation-delay:4.45s" cx="838" cy="311" r="2.6" />
+      <circle class="dt-node" style="animation-delay:4.45s" cx="502" cy="281" r="2.6" />
+      <circle class="dt-node" style="animation-delay:4.45s" cx="708" cy="246" r="2.6" />
+      <circle class="dt-node" style="animation-delay:4.45s" cx="410" cy="347" r="2.6" />
+      <circle class="dt-node" style="animation-delay:4.45s" cx="501" cy="215" r="2.6" />
+      <circle class="dt-node" style="animation-delay:4.45s" cx="403" cy="383" r="2.6" />
+      <circle class="dt-node" style="animation-delay:4.45s" cx="470" cy="274" r="2.6" />
+      <circle class="dt-node" style="animation-delay:4.45s" cx="779" cy="255" r="2.6" />
+      <circle class="dt-node" style="animation-delay:4.45s" cx="408" cy="373" r="2.6" />
+      <circle class="dt-node" style="animation-delay:4.45s" cx="778" cy="241" r="2.6" />
+      <circle class="dt-node" style="animation-delay:4.45s" cx="719" cy="284" r="2.6" />
+      <circle class="dt-node" style="animation-delay:4.45s" cx="761" cy="234" r="2.6" />
+      <circle class="dt-node" style="animation-delay:4.45s" cx="442" cy="315" r="2.6" />
+      <circle class="dt-node" style="animation-delay:4.45s" cx="414" cy="415" r="2.6" />
+      <circle class="dt-node" style="animation-delay:4.45s" cx="529" cy="272" r="2.6" />
+      <circle class="dt-node" style="animation-delay:4.00s" cx="632" cy="288" r="2.6" />
+      <circle class="dt-node" style="animation-delay:4.45s" cx="490" cy="272" r="2.6" />
+      <circle class="dt-node" style="animation-delay:4.45s" cx="615" cy="290" r="2.6" />
+      <circle class="dt-node" style="animation-delay:4.45s" cx="754" cy="234" r="2.6" />
+      <circle class="dt-node" style="animation-delay:4.45s" cx="554" cy="232" r="2.6" />
+      <circle class="dt-node" style="animation-delay:4.45s" cx="717" cy="253" r="2.6" />
+      <circle class="dt-node" style="animation-delay:4.45s" cx="718" cy="230" r="2.6" />
+      <circle class="dt-node" style="animation-delay:4.45s" cx="435" cy="271" r="2.6" />
+      <circle class="dt-node" style="animation-delay:4.45s" cx="717" cy="253" r="2.6" />
+      <circle class="dt-node" style="animation-delay:4.45s" cx="452" cy="290" r="2.6" />
+      <circle class="dt-node" style="animation-delay:4.45s" cx="779" cy="255" r="2.6" />
+      <circle class="dt-node" style="animation-delay:4.45s" cx="719" cy="284" r="2.6" />
+      <circle class="dt-node" style="animation-delay:4.45s" cx="664" cy="266" r="2.6" />
+      <circle class="dt-node" style="animation-delay:4.45s" cx="708" cy="246" r="2.6" />
+      <circle class="dt-node" style="animation-delay:4.45s" cx="666" cy="251" r="2.6" />
+      <circle class="dt-node" style="animation-delay:4.45s" cx="632" cy="252" r="2.6" />
+      <circle class="dt-node" style="animation-delay:4.45s" cx="646" cy="247" r="2.6" />
+      <circle class="dt-node" style="animation-delay:4.45s" cx="760" cy="267" r="2.6" />
+      <circle class="dt-node" style="animation-delay:4.45s" cx="827" cy="307" r="2.6" />
+      <circle class="dt-node" style="animation-delay:4.45s" cx="889" cy="375" r="2.6" />
+      <circle class="dt-node" style="animation-delay:4.45s" cx="730" cy="274" r="2.6" />
+      <circle class="dt-node" style="animation-delay:4.45s" cx="632" cy="252" r="2.6" />
+      <circle class="dt-node" style="animation-delay:4.45s" cx="838" cy="311" r="2.6" />
+      <circle class="dt-node" style="animation-delay:4.45s" cx="827" cy="307" r="2.6" />
+      <circle class="dt-node" style="animation-delay:4.45s" cx="410" cy="347" r="2.6" />
+      <circle class="dt-node" style="animation-delay:4.45s" cx="548" cy="238" r="2.6" />
+      <circle class="dt-node" style="animation-delay:4.45s" cx="595" cy="234" r="2.6" />
+      <circle class="dt-node" style="animation-delay:4.45s" cx="889" cy="375" r="2.6" />
+      <circle class="dt-node" style="animation-delay:4.45s" cx="502" cy="220" r="2.6" />
+      <circle class="dt-node" style="animation-delay:4.45s" cx="666" cy="251" r="2.6" />
+      <circle class="dt-node" style="animation-delay:4.45s" cx="431" cy="308" r="2.6" />
+      <circle class="dt-node" style="animation-delay:4.45s" cx="859" cy="332" r="2.6" />
+      <circle class="dt-node" style="animation-delay:4.45s" cx="439" cy="313" r="2.6" />
+      <circle class="dt-node" style="animation-delay:4.45s" cx="432" cy="288" r="2.6" />
+      <circle class="dt-node" style="animation-delay:4.45s" cx="502" cy="220" r="2.6" />
+      <circle class="dt-node" style="animation-delay:4.45s" cx="470" cy="274" r="2.6" />
+      <circle class="dt-node" style="animation-delay:4.45s" cx="432" cy="288" r="2.6" />
+      <circle class="dt-node" style="animation-delay:4.45s" cx="664" cy="266" r="2.6" />
+      <circle class="dt-node9" style="animation-delay:4.65s" cx="528" cy="214" r="6.5" />
+      <circle class="dt-node9" style="animation-delay:4.65s" cx="744" cy="229" r="6.5" />
+      <circle class="dt-node9" style="animation-delay:4.65s" cx="639" cy="234" r="6.5" />
+      <circle class="dt-node9" style="animation-delay:4.65s" cx="450" cy="252" r="6.5" />
+      <circle class="dt-node9" style="animation-delay:4.65s" cx="803" cy="270" r="6.5" />
+      <circle class="dt-node9" style="animation-delay:4.65s" cx="548" cy="284" r="6.5" />
+      <circle class="dt-node9" style="animation-delay:4.65s" cx="418" cy="324" r="6.5" />
+      <circle class="dt-node9" style="animation-delay:4.65s" cx="854" cy="325" r="6.5" />
+      <circle class="dt-node9" style="animation-delay:4.65s" cx="895" cy="394" r="6.5" />
     </svg>
     <div class="hero-overlay"></div>
     <div class="hero-content">

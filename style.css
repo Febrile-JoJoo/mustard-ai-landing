@@ -1313,10 +1313,9 @@ html {
     font-size: 0.95rem;
   }
 }
-
 /* ============================================
-   v2.4 — HERO 배경: 씨앗→나무 라인 드로잉
-   (스톡 사진 크로스페이드 대체)
+   v2.5 — HERO 배경: 데이터 나무
+   (씨앗→나무→AI 노드 네트워크 라인 드로잉)
    ============================================ */
 
 .hero-tree {
@@ -1328,23 +1327,22 @@ html {
   z-index: 0;
 }
 
-/* 공통: 도면 느낌의 가는 선, 진갈색 저투명 */
 .hero-tree path,
-.hero-tree ellipse {
+.hero-tree line {
   fill: none;
-  stroke: rgba(45, 32, 6, 0.5);
   stroke-linecap: round;
 }
 
 /* 지면 */
 .t-ground {
+  stroke: rgba(45, 32, 6, 0.5);
   stroke-width: 1.5;
   stroke-dasharray: 1100;
   stroke-dashoffset: 1100;
   animation: drawLine 1.2s ease-out 0.2s forwards;
 }
 
-/* 씨앗 — 0~1초 등장 */
+/* 씨앗 — 등장 */
 .t-seed {
   fill: rgba(45, 32, 6, 0.65);
   stroke: none;
@@ -1353,67 +1351,58 @@ html {
   animation: seedPop 0.8s cubic-bezier(0.2, 0.8, 0.3, 1) 0.4s forwards;
 }
 
-/* 줄기 — 1~3초 드로잉 */
-.t-trunk {
-  stroke-width: 3;
-  stroke-dasharray: 400;
-  stroke-dashoffset: 400;
-  animation: drawLine 2s ease-in-out 1s forwards;
+/* 줄기 — 굵은 유기 곡선 */
+.dt-trunk {
+  stroke: rgba(45, 32, 6, 0.55);
+  stroke-width: 3.2;
+  stroke-dasharray: 260;
+  stroke-dashoffset: 260;
+  animation: drawLine 0.9s ease-in-out forwards;
 }
 
-/* 가지 — 2.2~4.5초 순차 드로잉 */
-.t-branch {
+/* 가지 */
+.dt-branch {
+  stroke: rgba(45, 32, 6, 0.48);
   stroke-width: 2;
-  stroke-dasharray: 320;
-  stroke-dashoffset: 320;
+  stroke-dasharray: 180;
+  stroke-dashoffset: 180;
+  animation: drawLine 0.8s ease-out forwards;
 }
 
-.t-b1 { animation: drawLine 1.4s ease-out 2.2s forwards; }
-.t-b2 { animation: drawLine 1.4s ease-out 2.5s forwards; }
-.t-b3 { animation: drawLine 1.3s ease-out 2.8s forwards; }
-.t-b4 { animation: drawLine 1.3s ease-out 3.0s forwards; }
-.t-b5 { animation: drawLine 1.3s ease-out 3.2s forwards; }
-
-/* 잔가지 — 3.8~4.8초 */
-.t-twig {
-  stroke-width: 1.4;
-  stroke-dasharray: 90;
-  stroke-dashoffset: 90;
+/* 잔가지 */
+.dt-twig {
+  stroke: rgba(45, 32, 6, 0.38);
+  stroke-width: 1.2;
+  stroke-dasharray: 110;
+  stroke-dashoffset: 110;
+  animation: drawLine 0.7s ease-out forwards;
 }
 
-.t-t1 { animation: drawLine 0.8s ease-out 3.8s forwards; }
-.t-t2 { animation: drawLine 0.8s ease-out 4.0s forwards; }
-.t-t3 { animation: drawLine 0.8s ease-out 4.2s forwards; }
-.t-t4 { animation: drawLine 0.8s ease-out 4.4s forwards; }
-
-/* 잎 — 5~7초 스며들 듯 등장 */
-.t-leaf {
-  stroke-width: 1.4;
-  opacity: 0;
+/* 노드 연결선 — 네트워크 */
+.dt-link {
+  stroke: rgba(45, 32, 6, 0.22);
+  stroke-width: 1;
+  stroke-dasharray: 160;
+  stroke-dashoffset: 160;
+  animation: drawLine 1s ease-out forwards;
 }
 
-.t-l1 { animation: leafIn 1s ease-out 5.0s forwards; }
-.t-l2 { animation: leafIn 1s ease-out 5.2s forwards; }
-.t-l3 { animation: leafIn 1s ease-out 5.4s forwards; }
-.t-l4 { animation: leafIn 1s ease-out 5.6s forwards; }
-.t-l5 { animation: leafIn 1s ease-out 5.8s forwards; }
-.t-l6 { animation: leafIn 1s ease-out 6.0s forwards; }
-.t-l7 { animation: leafIn 1s ease-out 6.2s forwards; }
-.t-l8 { animation: leafIn 1s ease-out 6.4s forwards; }
-.t-l9 { animation: leafIn 1s ease-out 6.6s forwards; }
-
-/* 겨자씨 알갱이 — 7초 이후 은은하게 부유 */
-.t-spore {
-  fill: rgba(45, 32, 6, 0.35);
+/* 소형 데이터 노드 */
+.dt-node {
+  fill: rgba(45, 32, 6, 0.45);
   stroke: none;
   opacity: 0;
+  animation: nodeIn 0.6s ease-out forwards;
 }
 
-.t-s1 { animation: sporeIn 1.2s ease-out 7.0s forwards, sporeFloat 9s ease-in-out 8.2s infinite; }
-.t-s2 { animation: sporeIn 1.2s ease-out 7.3s forwards, sporeFloat 11s ease-in-out 8.5s infinite; }
-.t-s3 { animation: sporeIn 1.2s ease-out 7.6s forwards, sporeFloat 8s ease-in-out 8.8s infinite; }
-.t-s4 { animation: sporeIn 1.2s ease-out 7.9s forwards, sporeFloat 10s ease-in-out 9.1s infinite; }
-.t-s5 { animation: sporeIn 1.2s ease-out 8.2s forwards, sporeFloat 12s ease-in-out 9.4s infinite; }
+/* 9개 에이전트 노드 — 링 + 펄스 */
+.dt-node9 {
+  fill: rgba(45, 32, 6, 0.75);
+  stroke: rgba(45, 32, 6, 0.4);
+  stroke-width: 2.5;
+  opacity: 0;
+  animation: nodeIn 0.7s ease-out forwards, nodePulse 4s ease-in-out 5s infinite;
+}
 
 @keyframes drawLine {
   to { stroke-dashoffset: 0; }
@@ -1425,23 +1414,17 @@ html {
   100% { opacity: 1; transform: scale(1); }
 }
 
-@keyframes leafIn {
-  from { opacity: 0; }
-  to { opacity: 0.85; }
-}
-
-@keyframes sporeIn {
+@keyframes nodeIn {
   from { opacity: 0; }
   to { opacity: 1; }
 }
 
-@keyframes sporeFloat {
-  0%, 100% { transform: translate(0, 0); }
-  33% { transform: translate(6px, -12px); }
-  66% { transform: translate(-5px, -6px); }
+@keyframes nodePulse {
+  0%, 100% { stroke-width: 2.5; stroke-opacity: 0.4; }
+  50% { stroke-width: 5; stroke-opacity: 0.15; }
 }
 
-/* 오버레이 — 사진이 없어졌으니 옅게 조정 */
+/* 오버레이 — 옅게 */
 .hero-overlay {
   background: rgba(225, 173, 1, 0.18);
 }
@@ -1449,11 +1432,10 @@ html {
 /* 모션 최소화 선호 사용자 배려 */
 @media (prefers-reduced-motion: reduce) {
   .hero-tree path,
-  .hero-tree ellipse,
+  .hero-tree line,
   .hero-tree circle {
     animation: none !important;
     stroke-dashoffset: 0 !important;
     opacity: 1 !important;
   }
-  .t-leaf { opacity: 0.85 !important; }
 }
