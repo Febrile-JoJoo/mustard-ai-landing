@@ -1963,3 +1963,54 @@ html {
   background: #F3EAD3;
   border-color: rgba(92, 61, 0, 0.2);
 }
+
+/* ============================================
+   v2.8 — 섹션 구분선 · 팀 3열 · 아키텍처 톤 조정
+   ============================================ */
+
+/* 섹션 사이 얇은 구분선 */
+.project,
+.mustard-band,
+.now,
+.contact {
+  border-top: 1px solid rgba(92, 61, 0, 0.22);
+}
+
+/* 팀 멤버 — 한 줄 3개 고정 (내용 많으면 높이로 흡수) */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+.team-card {
+  max-width: none;
+}
+
+@media (max-width: 768px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* 아키텍처 스텝 — 흐린 머스타드 톤 */
+.flow-step {
+  background: #F2DE9F;
+  border-color: rgba(92, 61, 0, 0.25);
+}
+
+/* 최종 분석 리포트 — 원래 골드 스타일 원복 */
+.flow-step--final {
+  background: #FFD700;
+  border: 6px solid #B8860B;
+  box-shadow: 0 4px 20px rgba(225, 173, 1, 0.3);
+}
+
+/* 워크플로우 연결 화살표 — 선명하게 */
+.flow-arrow {
+  font-size: 1.6rem;
+  color: #2D2006;
+  opacity: 0.85;
+  padding: 0.5rem 0;
+}
