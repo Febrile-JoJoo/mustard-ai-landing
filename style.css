@@ -995,7 +995,8 @@ footer p {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   gap: 0.6rem;
-  background: linear-gradient(90deg, rgba(0,0,0,0.03), rgba(45,32,6,0.14));
+  background: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: var(--radius-lg);
   padding: 1.6rem 1rem 1.4rem;
 }
