@@ -1808,3 +1808,86 @@ html {
   margin: 4rem 0 1.5rem;
   letter-spacing: -0.01em;
 }
+
+/* ============================================
+   v2.5 — 아키텍처 플로우 인포그래픽화 (라이트 톤)
+   섹션 헤더 배지(다크)와 시각적으로 구분
+   ============================================ */
+
+.flow {
+  counter-reset: flowstep;
+}
+
+.flow-step {
+  background: #FFFDF4;
+  color: var(--text-body);
+  border: 1px solid rgba(92, 61, 0, 0.16);
+  box-shadow: 0 2px 12px rgba(92, 61, 0, 0.08);
+  padding: 1.5rem 2rem 1.7rem;
+  counter-increment: flowstep;
+}
+
+.flow-step::before {
+  content: "STEP " counter(flowstep);
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  color: #8B6914;
+  background: rgba(225, 173, 1, 0.16);
+  border: 1px solid rgba(184, 134, 11, 0.28);
+  padding: 2px 12px;
+  border-radius: 999px;
+  margin-bottom: 0.8rem;
+}
+
+.flow-icon {
+  font-size: 1.15rem;
+  margin-right: 0.3rem;
+}
+
+.flow-label {
+  color: #3D2900;
+}
+
+.flow-desc {
+  color: var(--text-muted);
+}
+
+.flow-sources span {
+  background: rgba(225, 173, 1, 0.16);
+  color: #5C3D00;
+  border: 1px solid rgba(184, 134, 11, 0.22);
+  font-weight: 600;
+}
+
+.flow-agents span {
+  background: rgba(225, 173, 1, 0.12);
+  color: #4A3100;
+  border: 1px solid rgba(184, 134, 11, 0.18);
+}
+
+.flow-arrow {
+  font-size: 1rem;
+  color: #8B6914;
+  padding: 0.6rem 0;
+  opacity: 0.55;
+}
+
+.flow-step--final {
+  background: linear-gradient(135deg, #FFE082, #FFD700);
+  color: #1A1000;
+  border: 2px solid #B8860B;
+  box-shadow: 0 6px 24px rgba(184, 134, 11, 0.3);
+}
+
+.flow-step--final::before {
+  content: "RESULT";
+  background: rgba(45, 32, 6, 0.9);
+  color: #FFE082;
+  border-color: rgba(45, 32, 6, 0.9);
+}
+
+.flow-step--final .flow-label {
+  color: #1A1000;
+}
