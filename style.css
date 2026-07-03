@@ -1548,3 +1548,63 @@ html {
   }
   .hero-bg-1 { opacity: 1 !important; }
 }
+
+/* ============================================
+   v2.2 — 히어로 CTA (초기 진입 행동 유도)
+   ============================================ */
+
+.hero-cta {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.btn-hero {
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 15px 34px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-hero--primary {
+  background: #FFD700;
+  color: #2D2006;
+  border: 2px solid #FFD700;
+  box-shadow: 0 4px 20px rgba(255, 215, 0, 0.35);
+}
+
+.btn-hero--primary:hover {
+  background: #FFE082;
+  border-color: #FFE082;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 28px rgba(255, 215, 0, 0.5);
+}
+
+.btn-hero--ghost {
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.95);
+  border: 2px solid rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(4px);
+}
+
+.btn-hero--ghost:hover {
+  background: rgba(255, 255, 255, 0.18);
+  border-color: rgba(255, 255, 255, 0.85);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .hero-cta {
+    flex-direction: column;
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .btn-hero {
+    text-align: center;
+  }
+}
