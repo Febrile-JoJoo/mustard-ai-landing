@@ -336,6 +336,7 @@ nav {
   color: var(--text-body);
   margin-bottom: 1.5rem;
   line-height: 1.8;
+  text-align: center;
 }
 
 .about-body p:last-child {
@@ -367,7 +368,7 @@ nav {
 }
 
 .project-header {
-  text-align: center;
+  text-align: left;
   margin-bottom: 3rem;
 }
 
@@ -376,7 +377,7 @@ nav {
   font-weight: 700;
   color: var(--black);
   letter-spacing: -0.02em;
-  text-align: center;
+  text-align: left;
   margin-bottom: 2rem;
 }
 
@@ -395,6 +396,7 @@ nav {
   line-height: 1.8;
   max-width: 700px;
   margin: 0 0 2rem;
+  text-align: center;
 }
 
 .project-architecture {
@@ -403,6 +405,7 @@ nav {
   line-height: 1.8;
   max-width: 900px;
   margin: 0;
+  text-align: center;
 }
 
 /* AGENT GRID — 3x3 카드 */
@@ -667,7 +670,7 @@ nav {
   color: var(--black);
   margin-bottom: 2rem;
   letter-spacing: -0.02em;
-  text-align: center;
+  text-align: left;
 }
 
 .contact-center {
@@ -990,7 +993,7 @@ footer p {
   padding: 8rem 3rem;
   max-width: 1500px;
   margin: 0 auto;
-  text-align: center;
+  text-align: left;
 }
 
 .thin-headline {
@@ -1000,12 +1003,14 @@ footer p {
   line-height: 1.35;
   letter-spacing: -0.02em;
   margin-bottom: 1.6rem;
+  text-align: center;
 }
 
 .thin-body {
   font-size: 1.3rem;
   color: var(--text-body);
   line-height: 1.9;
+  text-align: center;
 }
 
 .thin-quote {
@@ -1139,7 +1144,7 @@ html {
 .mustard-why {
   max-width: 1000px;
   margin: 0 auto 5rem;
-  text-align: center;
+  text-align: left;
   padding: 3rem 2.5rem;
   background: rgba(0, 0, 0, 0.05);
   border: 1.5px solid rgba(0, 0, 0, 0.12);
@@ -1155,6 +1160,7 @@ html {
   color: var(--text-body);
   line-height: 1.9;
   margin-bottom: 1.2rem;
+  text-align: center;
 }
 
 .why-body:last-child {
