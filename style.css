@@ -367,7 +367,7 @@ nav {
 }
 
 .project-header {
-  text-align: left;
+  text-align: center;
   margin-bottom: 3rem;
 }
 
@@ -376,7 +376,7 @@ nav {
   font-weight: 700;
   color: var(--black);
   letter-spacing: -0.02em;
-  text-align: left;
+  text-align: center;
   margin-bottom: 2rem;
 }
 
@@ -453,7 +453,7 @@ nav {
   padding-left: 1.5rem;
   margin-top: 2rem;
   max-width: 600px;
-  text-align: left;
+  text-align: center;
   margin-left: auto;
   margin-right: auto;
 }
@@ -667,7 +667,7 @@ nav {
   color: var(--black);
   margin-bottom: 2rem;
   letter-spacing: -0.02em;
-  text-align: left;
+  text-align: center;
 }
 
 .contact-center {
@@ -990,7 +990,7 @@ footer p {
   padding: 8rem 3rem;
   max-width: 1500px;
   margin: 0 auto;
-  text-align: left;
+  text-align: center;
 }
 
 .thin-headline {
@@ -1010,7 +1010,7 @@ footer p {
 
 .thin-quote {
   margin-top: 2.5rem;
-  text-align: left;
+  text-align: center;
 }
 
 /* (v2.3) T pivot 배경 반전 제거 — 7개 섹션 스타일 통일 */
@@ -1139,7 +1139,7 @@ html {
 .mustard-why {
   max-width: 1000px;
   margin: 0 auto 5rem;
-  text-align: left;
+  text-align: center;
   padding: 3rem 2.5rem;
   background: rgba(0, 0, 0, 0.05);
   border: 1.5px solid rgba(0, 0, 0, 0.12);
