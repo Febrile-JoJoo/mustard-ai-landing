@@ -269,16 +269,6 @@ nav {
   text-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
 }
 
-.hero-headline {
-  font-size: clamp(2.2rem, 5vw, 3.8rem);
-  font-weight: 700;
-  color: var(--white);
-  line-height: 1.25;
-  letter-spacing: -0.03em;
-  max-width: 1000px;
-  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.4), 0 0 40px rgba(0, 0, 0, 0.2);
-}
-
 .hero-btns {
   display: flex;
   gap: 1rem;
@@ -819,13 +809,33 @@ footer p {
 
 /* HERO 슬로건 */
 .hero-slogan-en {
-  font-size: clamp(1rem, 2vw, 1.4rem);
+  font-size: clamp(0.85rem, 1.5vw, 1.1rem);
   font-weight: 700;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: #FFE082;
   text-shadow: 0 1px 8px rgba(0, 0, 0, 0.35);
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-headline {
+  font-size: clamp(2.6rem, 6vw, 4.6rem);
+  font-weight: 800;
+  color: var(--white);
+  line-height: 1.25;
+  letter-spacing: -0.03em;
+  max-width: 1000px;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.4), 0 0 40px rgba(0, 0, 0, 0.2);
+}
+
+/* HERO 보조 문구 */
+.hero-sub {
+  font-size: clamp(1.1rem, 2.2vw, 1.5rem);
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.92);
+  line-height: 1.7;
+  margin-top: 1.5rem;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
 }
 
 /* 섹션 오버라인 */
