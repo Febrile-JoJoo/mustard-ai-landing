@@ -458,6 +458,26 @@ nav {
   margin-right: auto;
 }
 
+/* DART 공시 분석 강조 */
+.dart-highlight {
+  background: rgba(0, 0, 0, 0.06);
+  border: 1.5px solid rgba(0, 0, 0, 0.15);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+.dart-highlight h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--black);
+  margin-bottom: 0.6rem;
+}
+.dart-highlight p {
+  font-size: 1.05rem;
+  color: var(--text-body);
+  line-height: 1.8;
+}
+
 /* ============================================
    ARCHITECTURE — 시스템 아키텍처 플로우
    ============================================ */
