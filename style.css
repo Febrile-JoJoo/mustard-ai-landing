@@ -994,11 +994,11 @@ footer p {
 .band-track {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  gap: 0.6rem;
+  gap: 0.3rem;
   background: transparent;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: var(--radius-lg);
-  padding: 1.6rem 1rem 1.4rem;
+  padding: 1.2rem 0.6rem 1rem;
 }
 
 .band-step {
@@ -1006,9 +1006,9 @@ footer p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.15rem;
+  gap: 0.1rem;
   text-decoration: none;
-  padding: 0.8rem 0.3rem;
+  padding: 0.4rem 0.2rem;
   border-radius: var(--radius);
   transition: background 0.25s, transform 0.25s;
 }
