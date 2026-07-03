@@ -1107,7 +1107,7 @@ html {
 
 /* 왜 겨자씨인가 블록 */
 .mustard-why {
-  max-width: 700px;
+  max-width: 1000px;
   margin: 0 auto 5rem;
   text-align: left;
   padding: 3rem 2.5rem;
