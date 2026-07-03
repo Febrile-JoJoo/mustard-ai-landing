@@ -70,7 +70,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  max-width: 1100px;
+  max-width: 1200px;
   padding: 0 3rem;
 }
 
@@ -250,7 +250,7 @@ nav {
 .hero-content {
   position: relative;
   z-index: 2;
-  max-width: 800px;
+  max-width: 900px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -275,7 +275,7 @@ nav {
   color: var(--white);
   line-height: 1.25;
   letter-spacing: -0.03em;
-  max-width: 750px;
+  max-width: 850px;
   text-shadow: 0 2px 12px rgba(0, 0, 0, 0.4), 0 0 40px rgba(0, 0, 0, 0.2);
 }
 
@@ -326,7 +326,7 @@ nav {
 
 .about {
   padding: 8rem 3rem;
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -358,7 +358,7 @@ nav {
 
 .project {
   padding: 8rem 3rem;
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -474,7 +474,7 @@ nav {
 
 .architecture {
   padding: 8rem 3rem;
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -591,7 +591,7 @@ nav {
 
 .now {
   padding: 8rem 3rem;
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -647,7 +647,7 @@ nav {
 
 .contact {
   padding: 10rem 3rem;
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -768,6 +768,14 @@ footer p {
     gap: 0.8rem;
   }
 
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .hero-headline {
+    max-width: 100%;
+  }
+
   .about {
     padding: 5rem 1.5rem;
   }
@@ -837,7 +845,7 @@ footer p {
 /* MUSTARD 7단계 띠 */
 .mustard-band {
   padding: 7rem 3rem;
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
   text-align: center;
 }
@@ -950,7 +958,7 @@ footer p {
 /* 얇은 문장 섹션 (S · R · D) — 좌측 정렬, 다른 섹션과 동일 폭 */
 .thin-section {
   padding: 8rem 3rem;
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
   text-align: left;
 }
