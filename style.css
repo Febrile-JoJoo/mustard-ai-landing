@@ -183,17 +183,17 @@ nav {
 }
 
 .hero-bg-1 {
-  background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&q=80');
+  background-image: url('https://images.unsplash.com/photo-1457530378978-8bac673b8062?w=1920&q=80');
   animation: crossfadeA 15s ease-in-out infinite, slowMoveA 20s ease-in-out infinite alternate;
 }
 
 .hero-bg-2 {
-  background-image: url('https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1920&q=80');
+  background-image: url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1920&q=80');
   animation: crossfadeB 15s ease-in-out infinite, slowMoveB 25s ease-in-out infinite alternate;
 }
 
 .hero-bg-3 {
-  background-image: url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1920&q=80');
+  background-image: url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&q=80');
   animation: crossfadeC 15s ease-in-out infinite, slowMoveC 22s ease-in-out infinite alternate;
 }
 
