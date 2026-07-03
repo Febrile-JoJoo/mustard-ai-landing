@@ -102,11 +102,10 @@
     <p class="band-slogan">Small seed. Big signal. — 작은 학습이, 큰 신호를 잡아냅니다</p>
   </section>
 
-  <!-- 3. M · Multi-agent — 근거 -->
+  <!-- 3. 무엇이 다른가 -->
   <section class="project" id="agents">
     <div class="project-header">
-      <p class="step-badge"><span class="step-num">1</span> M — Multi-agent · 근거</p>
-      <h2>근거라는 토양</h2>
+      <h2>무엇이 다른가</h2>
       <p class="project-name">머스타드AI</p>
       <p class="project-tagline">9개 AI 에이전트가 종목의 모든 각도를 분석하는 투자 리서치 시스템.</p>
       <p class="project-architecture">기존 정량적 퀀트 모델의 한계(정성적 리스크 오독)와 일반 거대언어모델의 한계(수치적 환각)를 동시에 극복하기 위해, 금융공학과 9개 AI 멀티에이전트의 합의 메커니즘을 융합한 하이브리드 가치평가 아키텍처를 채택하고 있습니다.</p>
@@ -159,6 +158,61 @@
     <blockquote class="project-quote">
       "당신이 원하는 순간에 바로 만날 수 있는 당신의 애널리스트입니다."
     </blockquote>
+
+    <!-- 시스템 아키텍처 -->
+    <div class="flow" style="margin-top: 3rem;">
+      <div class="flow-step">
+        <div class="flow-label">데이터 소스</div>
+        <div class="flow-sources">
+          <span>재무제표DB</span>
+          <span>주식 데이터 API</span>
+          <span>DART 실시간 공시</span>
+          <span>실시간 뉴스 피드</span>
+          <span>실시간 시세 피드</span>
+          <span>매크로/원자재 지표</span>
+        </div>
+      </div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-step">
+        <div class="flow-label">데이터 전처리 및 기초 산출 연산</div>
+        <p class="flow-desc">Data Prep & Pre-calculation</p>
+      </div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-step flow-step--agents">
+        <div class="flow-label">9대 에이전트 병렬 분석</div>
+        <div class="flow-agents">
+          <span>기본적 가치</span>
+          <span>기술적 계량</span>
+          <span>언론·공시</span>
+          <span>자본 수급</span>
+          <span>거시 경제</span>
+          <span>산업 성장</span>
+          <span>재무 건전</span>
+          <span>섹터 시너지</span>
+          <span>미래 추론</span>
+        </div>
+      </div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-step">
+        <div class="flow-label">합의 점수(0~100) 산출</div>
+        <p class="flow-desc">정성적 가중 멀티플러 계산</p>
+      </div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-step">
+        <div class="flow-label">하이브리드 가치평가</div>
+        <p class="flow-desc">금융공학(S-RIM) 적정가 × 정성적 멀티플러 융합</p>
+      </div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-step">
+        <div class="flow-label">Self-Reflection 가드레일</div>
+        <p class="flow-desc">논리적 일관성 검증 및 텍스트-수치 자아 성찰</p>
+      </div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-step flow-step--final">
+        <div class="flow-label">최종 분석 리포트</div>
+        <p class="flow-desc">VIP 실시간 분석 리포트 및 적정 목표 주가 출력</p>
+      </div>
+    </div>
   </section>
 
   <!-- 4. U · Understand — 이해 (조셉 스토리) -->
@@ -188,87 +242,7 @@
     <p class="thin-body">배우는 사람에서, 자기 기준을 가진 투자자로.<br>"나는 이런 종목에, 이런 조건일 때, 이렇게 접근한다."<br>시장이 요동쳐도 내 원칙은 변하지 않습니다.</p>
   </section>
 
-  <!-- 7. A · Agentic — 구현 (아키텍처) -->
-  <section class="architecture" id="agentic">
-    <p class="step-badge"><span class="step-num">5</span> A — Agentic · 구현</p>
-    <h2>시스템 아키텍처</h2>
-    <p class="architecture-sub">우리가 이렇게 만들었듯, 당신의 원칙도 에이전트가 됩니다.</p>
-
-    <div class="flow">
-      <!-- 1. 데이터 소스 -->
-      <div class="flow-step">
-        <div class="flow-label">데이터 소스</div>
-        <div class="flow-sources">
-          <span>재무제표DB</span>
-          <span>주식 데이터 API</span>
-          <span>DART 실시간 공시</span>
-          <span>실시간 뉴스 피드</span>
-          <span>실시간 시세 피드</span>
-          <span>매크로/원자재 지표</span>
-        </div>
-      </div>
-
-      <div class="flow-arrow">▼</div>
-
-      <!-- 2. 전처리 -->
-      <div class="flow-step">
-        <div class="flow-label">데이터 전처리 및 기초 산출 연산</div>
-        <p class="flow-desc">Data Prep & Pre-calculation</p>
-      </div>
-
-      <div class="flow-arrow">▼</div>
-
-      <!-- 3. 9개 에이전트 -->
-      <div class="flow-step flow-step--agents">
-        <div class="flow-label">9대 에이전트 병렬 분석</div>
-        <div class="flow-agents">
-          <span>📊 재무</span>
-          <span>📈 기술적</span>
-          <span>📰 뉴스·공시</span>
-          <span>👥 수급</span>
-          <span>🌍 거시경제</span>
-          <span>🚀 성장성</span>
-          <span>🛡️ 안정성</span>
-          <span>👑 시장위상</span>
-          <span>🔮 미래가치</span>
-        </div>
-      </div>
-
-      <div class="flow-arrow">▼</div>
-
-      <!-- 4. 합의 점수 -->
-      <div class="flow-step">
-        <div class="flow-label">합의 점수(0~100) 산출</div>
-        <p class="flow-desc">정성적 가중 멀티플러 계산</p>
-      </div>
-
-      <div class="flow-arrow">▼</div>
-
-      <!-- 5. 하이브리드 가치평가 -->
-      <div class="flow-step">
-        <div class="flow-label">하이브리드 가치평가</div>
-        <p class="flow-desc">금융공학(S-RIM) 적정가 × 정성적 멀티플러 융합</p>
-      </div>
-
-      <div class="flow-arrow">▼</div>
-
-      <!-- 6. 가드레일 -->
-      <div class="flow-step">
-        <div class="flow-label">Self-Reflection 가드레일</div>
-        <p class="flow-desc">논리적 일관성 검증 및 텍스트-수치 자아 성찰</p>
-      </div>
-
-      <div class="flow-arrow">▼</div>
-
-      <!-- 7. 최종 리포트 -->
-      <div class="flow-step flow-step--final">
-        <div class="flow-label">최종 분석 리포트</div>
-        <p class="flow-desc">VIP 실시간 분석 리포트 및 적정 목표 주가 출력</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- 8. R · Resilience — 안정 (얇은 섹션) -->
+  <!-- 6. T · Thesis — 원칙 -->
   <section class="thin-section" id="resilience">
     <p class="step-badge"><span class="step-num">6</span> R — Resilience · 안정</p>
     <h2 class="thin-headline">폭풍이 불어도<br>나무는 뿌리로 버팁니다</h2>
