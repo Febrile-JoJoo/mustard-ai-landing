@@ -935,7 +935,7 @@ footer p {
 
 /* HERO 보조 문구 */
 .hero-sub {
-  font-size: clamp(1.1rem, 2.2vw, 1.5rem);
+  font-size: clamp(1.21rem, 2.42vw, 1.65rem);
   font-weight: 500;
   color: rgba(255, 255, 255, 0.92);
   line-height: 1.7;
