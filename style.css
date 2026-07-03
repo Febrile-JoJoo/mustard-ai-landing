@@ -481,6 +481,88 @@ nav {
   line-height: 1.8;
 }
 
+/* 증권사 대비 차별점 표 */
+.compare-table {
+  margin: 2rem 0;
+  text-align: center;
+}
+.compare-table h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--black);
+  margin-bottom: 1rem;
+}
+.compare-table table {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  text-align: left;
+}
+.compare-table th {
+  padding: 0.8rem 1rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--black);
+  border-bottom: 2px solid var(--black);
+}
+.compare-table td {
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  color: var(--text-body);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.compare-table td:first-child {
+  font-weight: 600;
+  color: var(--black);
+}
+.compare-table td strong {
+  color: #5C3D00;
+}
+.compare-tagline {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  font-style: italic;
+  color: var(--text-muted);
+}
+
+/* 팀 소개 */
+.team-section {
+  margin-top: 4rem;
+  text-align: center;
+}
+.team-section h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--black);
+  margin-bottom: 2rem;
+}
+.team-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+.team-card {
+  background: rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  max-width: 340px;
+  text-align: center;
+}
+.team-card strong {
+  display: block;
+  font-size: 1.15rem;
+  color: var(--black);
+  margin-bottom: 0.5rem;
+}
+.team-card p {
+  font-size: 1rem;
+  color: var(--text-body);
+  line-height: 1.6;
+}
+
 /* ============================================
    ARCHITECTURE — 시스템 아키텍처 플로우
    ============================================ */
