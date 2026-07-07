@@ -14,6 +14,7 @@
   /* 머스타드 계열 */
   --bg-deep: #E1AD01;
   --bg-deep-dark: #C99801;
+  --bg-light: #F5DA80;
   --bg-card: #D4A017;
   --bg-card-hover: #BF9015;
   --accent: #0B1426;
@@ -40,7 +41,7 @@ html {
 body {
   font-family: var(--font);
   color: var(--text-body);
-  background: var(--bg-deep);
+  background: var(--bg-light);
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
 }
@@ -344,7 +345,7 @@ nav {
 }
 
 /* ============================================
-   PROJECT — 진한 머스타드 배경
+   PROJECT — 옅은 머스타드 배경 (body 공통)
    ============================================ */
 
 .project {
